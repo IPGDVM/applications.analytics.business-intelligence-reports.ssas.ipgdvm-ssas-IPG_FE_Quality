@@ -1,0 +1,2886 @@
+{
+  "name": "SemanticModel",
+  "compatibilityLevel": 1400,
+  "model": {
+    "culture": "en-US",
+    "dataSources": [
+      {
+        "name": "iBI",
+        "connectionString": "Provider=MSDASQL;Persist Security Info=False;DSN=iBI DaaS",
+        "impersonationMode": "impersonateServiceAccount",
+        "annotations": [
+          {
+            "name": "ConnectionEditUISource",
+            "value": "Others"
+          }
+        ]
+      },
+      {
+        "type": "structured",
+        "name": "Odbc/dsn=iBI DaaS V3",
+        "connectionDetails": {
+          "protocol": "odbc",
+          "address": {
+            "options": {
+              "dsn": "iBI DaaS V3"
+            }
+          },
+          "authentication": null,
+          "query": null
+        },
+        "options": {
+          "hierarchicalNavigation": true
+        },
+        "credential": {
+          "AuthenticationKind": "ServiceAccount"
+        }
+      },
+      {
+        "type": "structured",
+        "name": "AnalysisServices/IPG_Functional_and_Code_Coverage intel com;IPG_Functional_and_C",
+        "connectionDetails": {
+          "protocol": "analysis-services",
+          "address": {
+            "server": "IPG_Functional_and_Code_Coverage.intel.com",
+            "database": "IPG_Functional_and_Code_Coverage"
+          },
+          "authentication": null,
+          "query": null
+        },
+        "options": {
+          "typedMeasureColumns": true,
+          "implementation": "2.0"
+        },
+        "credential": {
+          "AuthenticationKind": "ServiceAccount",
+          "kind": "AnalysisServices",
+          "path": "ipg_functional_and_code_coverage.intel.com;IPG_Functional_and_Code_Coverage"
+        }
+      },
+      {
+        "type": "structured",
+        "name": "AnalysisServices/IPG_Regression intel com;IPG_Regression",
+        "connectionDetails": {
+          "protocol": "analysis-services",
+          "address": {
+            "server": "IPG_Regression.intel.com",
+            "database": "IPG_Regression"
+          },
+          "authentication": null,
+          "query": null
+        },
+        "options": {
+          "typedMeasureColumns": true,
+          "implementation": "2.0"
+        },
+        "credential": {
+          "AuthenticationKind": "ServiceAccount",
+          "kind": "AnalysisServices",
+          "path": "ipg_regression.intel.com;IPG_Regression"
+        }
+      },
+      {
+        "type": "structured",
+        "name": "AnalysisServices/IPG_Bug intel com;IPG_Bug",
+        "connectionDetails": {
+          "protocol": "analysis-services",
+          "address": {
+            "server": "IPG_Bug.intel.com",
+            "database": "IPG_Bug"
+          },
+          "authentication": null,
+          "query": null
+        },
+        "options": {
+          "typedMeasureColumns": true,
+          "implementation": "2.0"
+        },
+        "credential": {
+          "AuthenticationKind": "ServiceAccount",
+          "kind": "AnalysisServices",
+          "path": "ipg_bug.intel.com;IPG_Bug"
+        }
+      },
+      {
+        "type": "structured",
+        "name": "AnalysisServices/IPG_Golden_Cube intel com;IPG_Golden_Cube",
+        "connectionDetails": {
+          "protocol": "analysis-services",
+          "address": {
+            "server": "IPG_Golden_Cube.intel.com",
+            "database": "IPG_Golden_Cube"
+          },
+          "authentication": null,
+          "query": null
+        },
+        "options": {
+          "typedMeasureColumns": true,
+          "implementation": "2.0"
+        },
+        "credential": {
+          "AuthenticationKind": "ServiceAccount",
+          "kind": "AnalysisServices",
+          "path": "ipg_golden_cube.intel.com;IPG_Golden_Cube"
+        }
+      }
+    ],
+    "tables": [
+      {
+        "name": "IPG_Bug",
+        "columns": [
+          {
+            "name": "2019_SoCFiledBug",
+            "dataType": "string",
+            "sourceColumn": "2019_SoCFiledBug"
+          },
+          {
+            "name": "APBExclude",
+            "dataType": "string",
+            "sourceColumn": "APBExclude"
+          },
+          {
+            "name": "Base_BugEscape",
+            "dataType": "string",
+            "sourceColumn": "Base_BugEscape"
+          },
+          {
+            "name": "bug_category",
+            "dataType": "string",
+            "sourceColumn": "bug_category"
+          },
+          {
+            "name": "bugeco.env_found",
+            "dataType": "string",
+            "sourceColumn": "bugeco.env_found"
+          },
+          {
+            "name": "bugeco.release_found",
+            "dataType": "string",
+            "sourceColumn": "bugeco.release_found"
+          },
+          {
+            "name": "bugeco.team_found",
+            "dataType": "string",
+            "sourceColumn": "bugeco.team_found"
+          },
+          {
+            "name": "bugeco.type",
+            "dataType": "string",
+            "sourceColumn": "bugeco.type"
+          },
+          {
+            "name": "BugFixedDoneDate",
+            "dataType": "string",
+            "sourceColumn": "BugFixedDoneDate"
+          },
+          {
+            "name": "BugsFiledbySoc",
+            "dataType": "string",
+            "sourceColumn": "BugsFiledbySoc"
+          },
+          {
+            "name": "ccb_prq_gating",
+            "dataType": "string",
+            "sourceColumn": "ccb_prq_gating"
+          },
+          {
+            "name": "closed_date",
+            "dataType": "string",
+            "sourceColumn": "closed_date"
+          },
+          {
+            "name": "component",
+            "dataType": "string",
+            "sourceColumn": "component"
+          },
+          {
+            "name": "Configuration",
+            "dataType": "string",
+            "sourceColumn": "Configuration"
+          },
+          {
+            "name": "current_ww_trend_in_quarter",
+            "dataType": "string",
+            "sourceColumn": "current_ww_trend_in_quarter"
+          },
+          {
+            "name": "currentmonth",
+            "dataType": "string",
+            "sourceColumn": "currentmonth"
+          },
+          {
+            "name": "currentww",
+            "dataType": "string",
+            "sourceColumn": "currentww"
+          },
+          {
+            "name": "CurrentWWSeqNbr",
+            "dataType": "string",
+            "sourceColumn": "CurrentWWSeqNbr"
+          },
+          {
+            "name": "currentyear",
+            "dataType": "string",
+            "sourceColumn": "currentyear"
+          },
+          {
+            "name": "CurrentYearMonth",
+            "dataType": "string",
+            "sourceColumn": "CurrentYearMonth"
+          },
+          {
+            "name": "CurrentYearMonthSeqNbr",
+            "dataType": "string",
+            "sourceColumn": "CurrentYearMonthSeqNbr"
+          },
+          {
+            "name": "CurrentYearQuarter",
+            "dataType": "string",
+            "sourceColumn": "CurrentYearQuarter"
+          },
+          {
+            "name": "CurrentYearQuarter_SeqNbr",
+            "dataType": "string",
+            "sourceColumn": "CurrentYearQuarter_SeqNbr"
+          },
+          {
+            "name": "DEG_Program",
+            "dataType": "string",
+            "sourceColumn": "DEG_Program"
+          },
+          {
+            "name": "DEG_TapeIn",
+            "dataType": "string",
+            "sourceColumn": "DEG_TapeIn"
+          },
+          {
+            "name": "DEG_TapeIn_SeqNbr",
+            "dataType": "string",
+            "sourceColumn": "DEG_TapeIn_SeqNbr"
+          },
+          {
+            "name": "DevSubOrg",
+            "dataType": "string",
+            "sourceColumn": "DevSubOrg"
+          },
+          {
+            "name": "env_found",
+            "dataType": "string",
+            "sourceColumn": "env_found"
+          },
+          {
+            "name": "Environment",
+            "dataType": "string",
+            "sourceColumn": "Environment"
+          },
+          {
+            "name": "Environment_order",
+            "dataType": "string",
+            "sourceColumn": "Environment_order"
+          },
+          {
+            "name": "Environment_with_order",
+            "dataType": "string",
+            "sourceColumn": "Environment_with_order"
+          },
+          {
+            "name": "family, soc",
+            "dataType": "string",
+            "sourceColumn": "family, soc"
+          },
+          {
+            "name": "final_unique_ww_submitted_nbr",
+            "dataType": "string",
+            "sourceColumn": "final_unique_ww_submitted_nbr"
+          },
+          {
+            "name": "final_ww_future_stepping",
+            "dataType": "string",
+            "sourceColumn": "final_ww_future_stepping"
+          },
+          {
+            "name": "FinalMinSetIDFutureStepping",
+            "dataType": "string",
+            "sourceColumn": "FinalMinSetIDFutureStepping"
+          },
+          {
+            "name": "from_subject",
+            "dataType": "string",
+            "sourceColumn": "from_subject"
+          },
+          {
+            "name": "from_tenant",
+            "dataType": "string",
+            "sourceColumn": "from_tenant"
+          },
+          {
+            "name": "generation",
+            "dataType": "string",
+            "sourceColumn": "generation"
+          },
+          {
+            "name": "Gladius",
+            "dataType": "string",
+            "sourceColumn": "Gladius"
+          },
+          {
+            "name": "id",
+            "dataType": "string",
+            "sourceColumn": "id"
+          },
+          {
+            "name": "InternalBugIds",
+            "dataType": "string",
+            "sourceColumn": "InternalBugIds"
+          },
+          {
+            "name": "InternalvsProject",
+            "dataType": "string",
+            "sourceColumn": "InternalvsProject"
+          },
+          {
+            "name": "IPFamily",
+            "dataType": "string",
+            "sourceColumn": "IPFamily"
+          },
+          {
+            "name": "IPGCustomers",
+            "dataType": "string",
+            "sourceColumn": "IPGCustomers"
+          },
+          {
+            "name": "IPSupplier",
+            "dataType": "string",
+            "sourceColumn": "IPSupplier"
+          },
+          {
+            "name": "is_active_bug",
+            "dataType": "string",
+            "sourceColumn": "is_active_bug"
+          },
+          {
+            "name": "is_active_legend",
+            "dataType": "string",
+            "sourceColumn": "is_active_legend"
+          },
+          {
+            "name": "is_cloned_from_ClientSOC",
+            "dataType": "string",
+            "sourceColumn": "is_cloned_from_ClientSOC"
+          },
+          {
+            "name": "is_found_bySoc",
+            "dataType": "string",
+            "sourceColumn": "is_found_bySoc"
+          },
+          {
+            "name": "is_new",
+            "dataType": "string",
+            "sourceColumn": "is_new"
+          },
+          {
+            "name": "is_PreSiPostSi",
+            "dataType": "string",
+            "sourceColumn": "is_PreSiPostSi"
+          },
+          {
+            "name": "is_resolution_failed",
+            "dataType": "string",
+            "sourceColumn": "is_resolution_failed"
+          },
+          {
+            "name": "is_resolution_met",
+            "dataType": "string",
+            "sourceColumn": "is_resolution_met"
+          },
+          {
+            "name": "is_response_failed",
+            "dataType": "string",
+            "sourceColumn": "is_response_failed"
+          },
+          {
+            "name": "is_response_met",
+            "dataType": "string",
+            "sourceColumn": "is_response_met"
+          },
+          {
+            "name": "IsActiveIP",
+            "dataType": "string",
+            "sourceColumn": "IsActiveIP"
+          },
+          {
+            "name": "IsAnchorProduct",
+            "dataType": "string",
+            "sourceColumn": "IsAnchorProduct"
+          },
+          {
+            "name": "IsBlankRTL1p0Date",
+            "dataType": "string",
+            "sourceColumn": "IsBlankRTL1p0Date"
+          },
+          {
+            "name": "IsBugInternalFixedDateMatchWW_Submitted",
+            "dataType": "string",
+            "sourceColumn": "IsBugInternalFixedDateMatchWW_Submitted"
+          },
+          {
+            "name": "IsClonedtoIPTenant",
+            "dataType": "string",
+            "sourceColumn": "IsClonedtoIPTenant"
+          },
+          {
+            "name": "IsCount",
+            "dataType": "string",
+            "sourceColumn": "IsCount"
+          },
+          {
+            "name": "IsFuturestepping",
+            "dataType": "string",
+            "sourceColumn": "IsFuturestepping"
+          },
+          {
+            "name": "IsHIPSIPType",
+            "dataType": "string",
+            "sourceColumn": "IsHIPSIPType"
+          },
+          {
+            "name": "IsPIC",
+            "dataType": "string",
+            "sourceColumn": "IsPIC"
+          },
+          {
+            "name": "IsRealBug",
+            "dataType": "string",
+            "sourceColumn": "IsRealBug"
+          },
+          {
+            "name": "IsSubIP",
+            "dataType": "string",
+            "sourceColumn": "IsSubIP"
+          },
+          {
+            "name": "IsSubmittedLast13Wk",
+            "dataType": "string",
+            "sourceColumn": "IsSubmittedLast13Wk"
+          },
+          {
+            "name": "IsSubmittedLast2Wk",
+            "dataType": "string",
+            "sourceColumn": "IsSubmittedLast2Wk"
+          },
+          {
+            "name": "IsSubmittedLast4Month",
+            "dataType": "string",
+            "sourceColumn": "IsSubmittedLast4Month"
+          },
+          {
+            "name": "IsSubmittedLast4WkToDate",
+            "dataType": "string",
+            "sourceColumn": "IsSubmittedLast4WkToDate"
+          },
+          {
+            "name": "IsSubmittedLast6Month",
+            "dataType": "string",
+            "sourceColumn": "IsSubmittedLast6Month"
+          },
+          {
+            "name": "IsTestChip",
+            "dataType": "string",
+            "sourceColumn": "IsTestChip"
+          },
+          {
+            "name": "IsTrackingorSupport",
+            "dataType": "string",
+            "sourceColumn": "IsTrackingorSupport"
+          },
+          {
+            "name": "IsUnique",
+            "dataType": "string",
+            "sourceColumn": "IsUnique"
+          },
+          {
+            "name": "IsUnique_External",
+            "dataType": "string",
+            "sourceColumn": "IsUnique_External"
+          },
+          {
+            "name": "lineage",
+            "dataType": "string",
+            "sourceColumn": "lineage"
+          },
+          {
+            "name": "lineage_final",
+            "dataType": "string",
+            "sourceColumn": "lineage_final"
+          },
+          {
+            "name": "lineage_from_ClientSOC",
+            "dataType": "string",
+            "sourceColumn": "lineage_from_ClientSOC"
+          },
+          {
+            "name": "Lineage_ID",
+            "dataType": "string",
+            "sourceColumn": "Lineage_ID"
+          },
+          {
+            "name": "Lineage_ID_Unique",
+            "dataType": "string",
+            "sourceColumn": "Lineage_ID_Unique"
+          },
+          {
+            "name": "milestone",
+            "dataType": "string",
+            "sourceColumn": "milestone"
+          },
+          {
+            "name": "MinSetID",
+            "dataType": "string",
+            "sourceColumn": "MinSetID"
+          },
+          {
+            "name": "MinSetID_External",
+            "dataType": "string",
+            "sourceColumn": "MinSetID_External"
+          },
+          {
+            "name": "MinSetIDFinal",
+            "dataType": "string",
+            "sourceColumn": "MinSetIDFinal"
+          },
+          {
+            "name": "MinSetIDFutureStepping",
+            "dataType": "string",
+            "sourceColumn": "MinSetIDFutureStepping"
+          },
+          {
+            "name": "MinSetIDFutureStepping_w_NotABug",
+            "dataType": "string",
+            "sourceColumn": "MinSetIDFutureStepping_w_NotABug"
+          },
+          {
+            "name": "MinSetIDNotFutureStepping",
+            "dataType": "string",
+            "sourceColumn": "MinSetIDNotFutureStepping"
+          },
+          {
+            "name": "Month",
+            "dataType": "string",
+            "sourceColumn": "Month"
+          },
+          {
+            "name": "MonthNbr",
+            "dataType": "string",
+            "sourceColumn": "MonthNbr"
+          },
+          {
+            "name": "NarendraSocDieSort",
+            "dataType": "string",
+            "sourceColumn": "NarendraSocDieSort"
+          },
+          {
+            "name": "NoiseFilter",
+            "dataType": "string",
+            "sourceColumn": "NoiseFilter"
+          },
+          {
+            "name": "Org",
+            "dataType": "string",
+            "sourceColumn": "Org"
+          },
+          {
+            "name": "original_family",
+            "dataType": "string",
+            "sourceColumn": "original_family"
+          },
+          {
+            "name": "original_lineage",
+            "dataType": "string",
+            "sourceColumn": "original_lineage"
+          },
+          {
+            "name": "owner",
+            "dataType": "string",
+            "sourceColumn": "owner"
+          },
+          {
+            "name": "Platform",
+            "dataType": "string",
+            "sourceColumn": "Platform"
+          },
+          {
+            "name": "previousww",
+            "dataType": "string",
+            "sourceColumn": "previousww"
+          },
+          {
+            "name": "PreviousYear",
+            "dataType": "string",
+            "sourceColumn": "PreviousYear"
+          },
+          {
+            "name": "PreviousYearMonth",
+            "dataType": "string",
+            "sourceColumn": "PreviousYearMonth"
+          },
+          {
+            "name": "PreviousYearQuarter",
+            "dataType": "string",
+            "sourceColumn": "PreviousYearQuarter"
+          },
+          {
+            "name": "PreviousYearQuarter_nbr",
+            "dataType": "string",
+            "sourceColumn": "PreviousYearQuarter_nbr"
+          },
+          {
+            "name": "priority",
+            "dataType": "string",
+            "sourceColumn": "priority"
+          },
+          {
+            "name": "Process",
+            "dataType": "string",
+            "sourceColumn": "Process"
+          },
+          {
+            "name": "project",
+            "dataType": "string",
+            "sourceColumn": "project"
+          },
+          {
+            "name": "project_short",
+            "dataType": "string",
+            "sourceColumn": "project_short"
+          },
+          {
+            "name": "project_step1",
+            "dataType": "string",
+            "sourceColumn": "project_step1"
+          },
+          {
+            "name": "project_step2",
+            "dataType": "string",
+            "sourceColumn": "project_step2"
+          },
+          {
+            "name": "Query_currentWW",
+            "dataType": "string",
+            "sourceColumn": "Query_currentWW"
+          },
+          {
+            "name": "release",
+            "dataType": "string",
+            "sourceColumn": "release"
+          },
+          {
+            "name": "release_affected",
+            "dataType": "string",
+            "sourceColumn": "release_affected"
+          },
+          {
+            "name": "resolution_time_filter",
+            "dataType": "string",
+            "sourceColumn": "resolution_time_filter"
+          },
+          {
+            "name": "resolutionSLA",
+            "dataType": "string",
+            "sourceColumn": "resolutionSLA"
+          },
+          {
+            "name": "response_time_filter",
+            "dataType": "string",
+            "sourceColumn": "response_time_filter"
+          },
+          {
+            "name": "responseSLA",
+            "dataType": "string",
+            "sourceColumn": "responseSLA"
+          },
+          {
+            "name": "retro_analysis",
+            "dataType": "string",
+            "sourceColumn": "retro_analysis"
+          },
+          {
+            "name": "retro_global_action",
+            "dataType": "string",
+            "sourceColumn": "retro_global_action"
+          },
+          {
+            "name": "retro_global_learning",
+            "dataType": "string",
+            "sourceColumn": "retro_global_learning"
+          },
+          {
+            "name": "retro_ip_escape",
+            "dataType": "string",
+            "sourceColumn": "retro_ip_escape"
+          },
+          {
+            "name": "retro_learnings",
+            "dataType": "string",
+            "sourceColumn": "retro_learnings"
+          },
+          {
+            "name": "retro_status",
+            "dataType": "string",
+            "sourceColumn": "retro_status"
+          },
+          {
+            "name": "RTL1p0Date",
+            "dataType": "string",
+            "sourceColumn": "RTL1p0Date"
+          },
+          {
+            "name": "RTL1p0DateSeqNbr",
+            "dataType": "string",
+            "sourceColumn": "RTL1p0DateSeqNbr"
+          },
+          {
+            "name": "RTL1p0Milestone",
+            "dataType": "string",
+            "sourceColumn": "RTL1p0Milestone"
+          },
+          {
+            "name": "Sathi_check",
+            "dataType": "string",
+            "sourceColumn": "Sathi_check"
+          },
+          {
+            "name": "sla_resolution_date",
+            "dataType": "string",
+            "sourceColumn": "sla_resolution_date"
+          },
+          {
+            "name": "sla_resolution_met",
+            "dataType": "string",
+            "sourceColumn": "sla_resolution_met"
+          },
+          {
+            "name": "sla_response_date",
+            "dataType": "string",
+            "sourceColumn": "sla_response_date"
+          },
+          {
+            "name": "sla_response_met",
+            "dataType": "string",
+            "sourceColumn": "sla_response_met"
+          },
+          {
+            "name": "Soc Die",
+            "dataType": "string",
+            "sourceColumn": "Soc Die"
+          },
+          {
+            "name": "SOC Die Count",
+            "dataType": "string",
+            "sourceColumn": "SOC Die Count"
+          },
+          {
+            "name": "SOC_Die_Sorting_Desc",
+            "dataType": "string",
+            "sourceColumn": "SOC_Die_Sorting_Desc"
+          },
+          {
+            "name": "SoCDieForSorting",
+            "dataType": "string",
+            "sourceColumn": "SoCDieForSorting"
+          },
+          {
+            "name": "SoCFiled",
+            "dataType": "string",
+            "sourceColumn": "SoCFiled"
+          },
+          {
+            "name": "status",
+            "dataType": "string",
+            "sourceColumn": "status"
+          },
+          {
+            "name": "status_detail",
+            "dataType": "string",
+            "sourceColumn": "status_detail"
+          },
+          {
+            "name": "status_with_notbug",
+            "dataType": "string",
+            "sourceColumn": "status_with_notbug"
+          },
+          {
+            "name": "status_with_notbug_order",
+            "dataType": "string",
+            "sourceColumn": "status_with_notbug_order"
+          },
+          {
+            "name": "statusNameOrder",
+            "dataType": "string",
+            "sourceColumn": "statusNameOrder"
+          },
+          {
+            "name": "StatusOrder",
+            "dataType": "string",
+            "sourceColumn": "StatusOrder"
+          },
+          {
+            "name": "sub_bugcategory",
+            "dataType": "string",
+            "sourceColumn": "sub_bugcategory"
+          },
+          {
+            "name": "sub_bugcategory_nbr",
+            "dataType": "string",
+            "sourceColumn": "sub_bugcategory_nbr"
+          },
+          {
+            "name": "subbugcategory",
+            "dataType": "string",
+            "sourceColumn": "subbugcategory"
+          },
+          {
+            "name": "subip_family",
+            "dataType": "string",
+            "sourceColumn": "subip_family"
+          },
+          {
+            "name": "subip_supplier",
+            "dataType": "string",
+            "sourceColumn": "subip_supplier"
+          },
+          {
+            "name": "submitted_by",
+            "dataType": "string",
+            "sourceColumn": "submitted_by"
+          },
+          {
+            "name": "submitted_date",
+            "dataType": "string",
+            "sourceColumn": "submitted_date"
+          },
+          {
+            "name": "SubmittedYear",
+            "dataType": "string",
+            "sourceColumn": "SubmittedYear"
+          },
+          {
+            "name": "SubmittedYear_Quarter",
+            "dataType": "string",
+            "sourceColumn": "SubmittedYear_Quarter"
+          },
+          {
+            "name": "SubOrg",
+            "dataType": "string",
+            "sourceColumn": "SubOrg"
+          },
+          {
+            "name": "supplier_org",
+            "dataType": "string",
+            "sourceColumn": "supplier_org"
+          },
+          {
+            "name": "tag",
+            "dataType": "string",
+            "sourceColumn": "tag"
+          },
+          {
+            "name": "Tapein",
+            "dataType": "string",
+            "sourceColumn": "Tapein"
+          },
+          {
+            "name": "TapeinMilestone",
+            "dataType": "string",
+            "sourceColumn": "TapeinMilestone"
+          },
+          {
+            "name": "team_found",
+            "dataType": "string",
+            "sourceColumn": "team_found"
+          },
+          {
+            "name": "tenant",
+            "dataType": "string",
+            "sourceColumn": "tenant"
+          },
+          {
+            "name": "title",
+            "dataType": "string",
+            "sourceColumn": "title"
+          },
+          {
+            "name": "totalID",
+            "dataType": "string",
+            "sourceColumn": "totalID"
+          },
+          {
+            "name": "unique_ww_submitted_nbr",
+            "dataType": "string",
+            "sourceColumn": "unique_ww_submitted_nbr"
+          },
+          {
+            "name": "unique_ww_submitted_nbr_external",
+            "dataType": "string",
+            "sourceColumn": "unique_ww_submitted_nbr_external"
+          },
+          {
+            "name": "UniqueKey",
+            "dataType": "string",
+            "sourceColumn": "UniqueKey"
+          },
+          {
+            "name": "updated_by",
+            "dataType": "string",
+            "sourceColumn": "updated_by"
+          },
+          {
+            "name": "updated_date",
+            "dataType": "string",
+            "sourceColumn": "updated_date"
+          },
+          {
+            "name": "url",
+            "dataType": "string",
+            "sourceColumn": "url"
+          },
+          {
+            "name": "ww",
+            "dataType": "string",
+            "sourceColumn": "ww"
+          },
+          {
+            "name": "ww_closed_date",
+            "dataType": "string",
+            "sourceColumn": "ww_closed_date"
+          },
+          {
+            "name": "ww_future_stepping",
+            "dataType": "string",
+            "sourceColumn": "ww_future_stepping"
+          },
+          {
+            "name": "ww_not_future_stepping",
+            "dataType": "string",
+            "sourceColumn": "ww_not_future_stepping"
+          },
+          {
+            "name": "ww_submitted_date",
+            "dataType": "string",
+            "sourceColumn": "ww_submitted_date"
+          },
+          {
+            "name": "ww_submitted_nbr",
+            "dataType": "string",
+            "sourceColumn": "ww_submitted_nbr"
+          },
+          {
+            "name": "ww_submitted_trend_in_quarter",
+            "dataType": "string",
+            "sourceColumn": "ww_submitted_trend_in_quarter"
+          },
+          {
+            "name": "ww_trend",
+            "dataType": "string",
+            "sourceColumn": "ww_trend"
+          },
+          {
+            "name": "ww_updated_date",
+            "dataType": "string",
+            "sourceColumn": "ww_updated_date"
+          },
+          {
+            "name": "WWSubmittedSeqNbr",
+            "dataType": "string",
+            "sourceColumn": "WWSubmittedSeqNbr"
+          },
+          {
+            "name": "YearMonth_submitted",
+            "dataType": "string",
+            "sourceColumn": "YearMonth_submitted"
+          },
+          {
+            "name": "YearMonth_submitted_SeqNbr",
+            "dataType": "string",
+            "sourceColumn": "YearMonth_submitted_SeqNbr"
+          },
+          {
+            "name": "YearMonthDisplay",
+            "dataType": "string",
+            "sourceColumn": "YearMonthDisplay"
+          },
+          {
+            "type": "calculated",
+            "name": "gk_branch",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": "IF(len(RELATED(server_gk_branch[gk_branch])) < 1, \"no branch\", RELATED(server_gk_branch[gk_branch])) "
+          },
+          {
+            "type": "calculated",
+            "name": "cust_func_open_bugs",
+            "dataType": "int64",
+            "isDataTypeInferred": true,
+            "expression": "if( 'IPG_Bug'[is_found_bySoc] = \"HW PreSiBug Found by SOC\" && IPG_Bug[subbugcategory] = \"Functional\" && IPG_Bug[status] in {\"open\", \"change_defined\", \"approved\", \"repo_modified\"} && [status_detail] <> \"repo_modified.validated\" && [bugeco.type] = \"bug\", 1, 0)"
+          },
+          {
+            "type": "calculated",
+            "name": "cust_non_func_open_bugs",
+            "dataType": "int64",
+            "isDataTypeInferred": true,
+            "expression": "if( 'IPG_Bug'[is_found_bySoc] = \"HW PreSiBug Found by SOC\" && IPG_Bug[subbugcategory] <> \"Functional\" && IPG_Bug[status] in {\"open\", \"change_defined\", \"approved\", \"repo_modified\"} && [status_detail] <> \"repo_modified.validated\" && [bugeco.type] = \"bug\", 1, 0)"
+          },
+          {
+            "type": "calculated",
+            "name": "cust_func_bugs_all",
+            "dataType": "int64",
+            "isDataTypeInferred": true,
+            "expression": "if( 'IPG_Bug'[is_found_bySoc] = \"HW PreSiBug Found by SOC\" && IPG_Bug[subbugcategory] = \"Functional\"  && [bugeco.type] = \"bug\", 1, 0)"
+          },
+          {
+            "type": "calculated",
+            "name": "cust_non_func_bugs_all",
+            "dataType": "int64",
+            "isDataTypeInferred": true,
+            "expression": "if( 'IPG_Bug'[is_found_bySoc] = \"HW PreSiBug Found by SOC\" && IPG_Bug[subbugcategory] <> \"Functional\" && [bugeco.type] = \"bug\", 1,0)"
+          },
+          {
+            "type": "calculated",
+            "name": "func_bugs_open",
+            "dataType": "int64",
+            "isDataTypeInferred": true,
+            "expression": "if( 'IPG_Bug'[is_found_bySoc] = \"HW PreSiBug Found by IP\" && IPG_Bug[subbugcategory] = \"Functional\" && IPG_Bug[status] in {\"open\", \"change_defined\", \"approved\", \"repo_modified\"} && [status_detail] <> \"repo_modified.validated\" && [bugeco.type] = \"bug\", 1, 0)"
+          },
+          {
+            "type": "calculated",
+            "name": "non_func_bugs_open",
+            "dataType": "int64",
+            "isDataTypeInferred": true,
+            "expression": "if( 'IPG_Bug'[is_found_bySoc] = \"HW PreSiBug Found by IP\" && IPG_Bug[subbugcategory] <> \"Functional\" && IPG_Bug[status] in {\"open\", \"change_defined\", \"approved\", \"repo_modified\"} && [status_detail] <> \"repo_modified.validated\" && [bugeco.type] = \"bug\", 1, 0)"
+          },
+          {
+            "type": "calculated",
+            "name": "func_bugs_open_2wks",
+            "dataType": "int64",
+            "isDataTypeInferred": true,
+            "expression": "if(IPG_Bug[subbugcategory] = \"Functional\" && IPG_Bug[IsSubmittedLast2Wk] = \"1\" && [bugeco.type] = \"bug\" && 'IPG_Bug'[is_found_bySoc] in { \"HW PreSiBug Found by SOC\" , \"HW PreSiBug Found by IP\"} , 1, 0)"
+          },
+          {
+            "type": "calculated",
+            "name": "non_func_bugs_open_2wks",
+            "dataType": "int64",
+            "isDataTypeInferred": true,
+            "expression": "if(IPG_Bug[subbugcategory] <> \"Functional\" && IPG_Bug[IsSubmittedLast2Wk] = \"1\" && [bugeco.type] = \"bug\" && 'IPG_Bug'[is_found_bySoc] in { \"HW PreSiBug Found by SOC\" , \"HW PreSiBug Found by IP\"} , 1, 0)"
+          },
+          {
+            "type": "calculated",
+            "name": "map",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": "IF(ISBLANK([release]), \"no release\", [release]&[gk_branch_mod])"
+          },
+          {
+            "type": "calculated",
+            "name": "total_bugs",
+            "dataType": "int64",
+            "isDataTypeInferred": true,
+            "expression": "if([bugeco.type] = \"bug\" && 'IPG_Bug'[is_found_bySoc] in { \"HW PreSiBug Found by SOC\" , \"HW PreSiBug Found by IP\"} , 1, 0)"
+          },
+          {
+            "type": "calculated",
+            "name": "gk_branch_mod",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": "IF(ISBLANK([gk_branch]), \"no branch\", [gk_branch])"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Partition",
+            "dataView": "full",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = #\"AnalysisServices/IPG_Bug intel com;IPG_Bug\",",
+                "    Model1 = Source{[Id=\"Model\"]}[Data],",
+                "    Model2 = Model1{[Id=\"Model\"]}[Data],",
+                "    #\"Added Items\" = Cube.Transform(Model2,",
+                "        {",
+                "            {Cube.AddAndExpandDimensionColumn, \"[QueryBug]\", {\"[QueryBug].[2019_SoCFiledBug].[2019_SoCFiledBug]\",",
+                "\"[QueryBug].[APBExclude].[APBExclude]\",",
+                "\"[QueryBug].[Base_BugEscape].[Base_BugEscape]\",",
+                "\"[QueryBug].[bug_category].[bug_category]\",",
+                "\"[QueryBug].[bugeco.env_found].[bugeco.env_found]\",",
+                "\"[QueryBug].[bugeco.release_found].[bugeco.release_found]\",",
+                "\"[QueryBug].[bugeco.team_found].[bugeco.team_found]\",",
+                "\"[QueryBug].[bugeco.type].[bugeco.type]\",",
+                "\"[QueryBug].[BugFixedDoneDate].[BugFixedDoneDate]\",",
+                "\"[QueryBug].[BugsFiledbySoc].[BugsFiledbySoc]\",",
+                "\"[QueryBug].[ccb_prq_gating].[ccb_prq_gating]\",",
+                "\"[QueryBug].[closed_date].[closed_date]\",",
+                "\"[QueryBug].[component].[component]\",",
+                "\"[QueryBug].[Configuration].[Configuration]\",",
+                "\"[QueryBug].[current_ww_trend_in_quarter].[current_ww_trend_in_quarter]\",",
+                "\"[QueryBug].[currentmonth].[currentmonth]\",",
+                "\"[QueryBug].[currentww].[currentww]\",",
+                "\"[QueryBug].[CurrentWWSeqNbr].[CurrentWWSeqNbr]\",",
+                "\"[QueryBug].[currentyear].[currentyear]\",",
+                "\"[QueryBug].[CurrentYearMonth].[CurrentYearMonth]\",",
+                "\"[QueryBug].[CurrentYearMonthSeqNbr].[CurrentYearMonthSeqNbr]\",",
+                "\"[QueryBug].[CurrentYearQuarter].[CurrentYearQuarter]\",",
+                "\"[QueryBug].[CurrentYearQuarter_SeqNbr].[CurrentYearQuarter_SeqNbr]\",",
+                "\"[QueryBug].[DEG_Program].[DEG_Program]\",",
+                "\"[QueryBug].[DEG_TapeIn].[DEG_TapeIn]\",",
+                "\"[QueryBug].[DEG_TapeIn_SeqNbr].[DEG_TapeIn_SeqNbr]\",",
+                "\"[QueryBug].[DevSubOrg].[DevSubOrg]\",",
+                "\"[QueryBug].[env_found].[env_found]\",",
+                "\"[QueryBug].[Environment].[Environment]\",",
+                "\"[QueryBug].[Environment_order].[Environment_order]\",",
+                "\"[QueryBug].[Environment_with_order].[Environment_with_order]\",",
+                "\"[QueryBug].[family, soc].[family, soc]\",",
+                "\"[QueryBug].[final_unique_ww_submitted_nbr].[final_unique_ww_submitted_nbr]\",",
+                "\"[QueryBug].[final_ww_future_stepping].[final_ww_future_stepping]\",",
+                "\"[QueryBug].[FinalMinSetIDFutureStepping].[FinalMinSetIDFutureStepping]\",",
+                "\"[QueryBug].[from_subject].[from_subject]\",",
+                "\"[QueryBug].[from_tenant].[from_tenant]\",",
+                "\"[QueryBug].[generation].[generation]\",",
+                "\"[QueryBug].[Gladius].[Gladius]\",",
+                "\"[QueryBug].[id].[id]\",",
+                "\"[QueryBug].[InternalBugIds].[InternalBugIds]\",",
+                "\"[QueryBug].[InternalvsProject].[InternalvsProject]\",",
+                "\"[QueryBug].[IPFamily].[IPFamily]\",",
+                "\"[QueryBug].[IPGCustomers].[IPGCustomers]\",",
+                "\"[QueryBug].[IPSupplier].[IPSupplier]\",",
+                "\"[QueryBug].[is_active_bug].[is_active_bug]\",",
+                "\"[QueryBug].[is_active_legend].[is_active_legend]\",",
+                "\"[QueryBug].[is_cloned_from_ClientSOC].[is_cloned_from_ClientSOC]\",",
+                "\"[QueryBug].[is_found_bySoc].[is_found_bySoc]\",",
+                "\"[QueryBug].[is_new].[is_new]\",",
+                "\"[QueryBug].[is_PreSiPostSi].[is_PreSiPostSi]\",",
+                "\"[QueryBug].[is_resolution_failed].[is_resolution_failed]\",",
+                "\"[QueryBug].[is_resolution_met].[is_resolution_met]\",",
+                "\"[QueryBug].[is_response_failed].[is_response_failed]\",",
+                "\"[QueryBug].[is_response_met].[is_response_met]\",",
+                "\"[QueryBug].[IsActiveIP].[IsActiveIP]\",",
+                "\"[QueryBug].[IsAnchorProduct].[IsAnchorProduct]\",",
+                "\"[QueryBug].[IsBlankRTL1p0Date].[IsBlankRTL1p0Date]\",",
+                "\"[QueryBug].[IsBugInternalFixedDateMatchWW_Submitted].[IsBugInternalFixedDateMatchWW_Submitted]\",",
+                "\"[QueryBug].[IsClonedtoIPTenant].[IsClonedtoIPTenant]\",",
+                "\"[QueryBug].[IsCount].[IsCount]\",",
+                "\"[QueryBug].[IsFuturestepping].[IsFuturestepping]\",",
+                "\"[QueryBug].[IsHIPSIPType].[IsHIPSIPType]\",",
+                "\"[QueryBug].[IsPIC].[IsPIC]\",",
+                "\"[QueryBug].[IsRealBug].[IsRealBug]\",",
+                "\"[QueryBug].[IsSubIP].[IsSubIP]\",",
+                "\"[QueryBug].[IsSubmittedLast13Wk].[IsSubmittedLast13Wk]\",",
+                "\"[QueryBug].[IsSubmittedLast2Wk].[IsSubmittedLast2Wk]\",",
+                "\"[QueryBug].[IsSubmittedLast4Month].[IsSubmittedLast4Month]\",",
+                "\"[QueryBug].[IsSubmittedLast4WkToDate].[IsSubmittedLast4WkToDate]\",",
+                "\"[QueryBug].[IsSubmittedLast6Month].[IsSubmittedLast6Month]\",",
+                "\"[QueryBug].[IsTestChip].[IsTestChip]\",",
+                "\"[QueryBug].[IsTrackingorSupport].[IsTrackingorSupport]\",",
+                "\"[QueryBug].[IsUnique].[IsUnique]\",",
+                "\"[QueryBug].[IsUnique_External].[IsUnique_External]\",",
+                "\"[QueryBug].[lineage].[lineage]\",",
+                "\"[QueryBug].[lineage_final].[lineage_final]\",",
+                "\"[QueryBug].[lineage_from_ClientSOC].[lineage_from_ClientSOC]\",",
+                "\"[QueryBug].[Lineage_ID].[Lineage_ID]\",",
+                "\"[QueryBug].[Lineage_ID_Unique].[Lineage_ID_Unique]\",",
+                "\"[QueryBug].[milestone].[milestone]\",",
+                "\"[QueryBug].[MinSetID].[MinSetID]\",",
+                "\"[QueryBug].[MinSetID_External].[MinSetID_External]\",",
+                "\"[QueryBug].[MinSetIDFinal].[MinSetIDFinal]\",",
+                "\"[QueryBug].[MinSetIDFutureStepping].[MinSetIDFutureStepping]\",",
+                "\"[QueryBug].[MinSetIDFutureStepping_w_NotABug].[MinSetIDFutureStepping_w_NotABug]\",",
+                "\"[QueryBug].[MinSetIDNotFutureStepping].[MinSetIDNotFutureStepping]\",",
+                "\"[QueryBug].[Month].[Month]\",",
+                "\"[QueryBug].[MonthNbr].[MonthNbr]\",",
+                "\"[QueryBug].[NarendraSocDieSort].[NarendraSocDieSort]\",",
+                "\"[QueryBug].[NoiseFilter].[NoiseFilter]\",",
+                "\"[QueryBug].[Org].[Org]\",",
+                "\"[QueryBug].[original_family].[original_family]\",",
+                "\"[QueryBug].[original_lineage].[original_lineage]\",",
+                "\"[QueryBug].[owner].[owner]\",",
+                "\"[QueryBug].[Platform].[Platform]\",",
+                "\"[QueryBug].[previousww].[previousww]\",",
+                "\"[QueryBug].[PreviousYear].[PreviousYear]\",",
+                "\"[QueryBug].[PreviousYearMonth].[PreviousYearMonth]\",",
+                "\"[QueryBug].[PreviousYearQuarter].[PreviousYearQuarter]\",",
+                "\"[QueryBug].[PreviousYearQuarter_nbr].[PreviousYearQuarter_nbr]\",",
+                "\"[QueryBug].[priority].[priority]\",",
+                "\"[QueryBug].[Process].[Process]\",",
+                "\"[QueryBug].[project].[project]\",",
+                "\"[QueryBug].[project_short].[project_short]\",",
+                "\"[QueryBug].[project_step1].[project_step1]\",",
+                "\"[QueryBug].[project_step2].[project_step2]\",",
+                "\"[QueryBug].[Query_currentWW].[Query_currentWW]\",",
+                "\"[QueryBug].[release].[release]\",",
+                "\"[QueryBug].[release_affected].[release_affected]\",",
+                "\"[QueryBug].[resolution_time_filter].[resolution_time_filter]\",",
+                "\"[QueryBug].[resolutionSLA].[resolutionSLA]\",",
+                "\"[QueryBug].[response_time_filter].[response_time_filter]\",",
+                "\"[QueryBug].[responseSLA].[responseSLA]\",",
+                "\"[QueryBug].[retro_analysis].[retro_analysis]\",",
+                "\"[QueryBug].[retro_global_action].[retro_global_action]\",",
+                "\"[QueryBug].[retro_global_learning].[retro_global_learning]\",",
+                "\"[QueryBug].[retro_ip_escape].[retro_ip_escape]\",",
+                "\"[QueryBug].[retro_learnings].[retro_learnings]\",",
+                "\"[QueryBug].[retro_status].[retro_status]\",",
+                "\"[QueryBug].[RTL1p0Date].[RTL1p0Date]\",",
+                "\"[QueryBug].[RTL1p0DateSeqNbr].[RTL1p0DateSeqNbr]\",",
+                "\"[QueryBug].[RTL1p0Milestone].[RTL1p0Milestone]\",",
+                "\"[QueryBug].[Sathi_check].[Sathi_check]\",",
+                "\"[QueryBug].[sla_resolution_date].[sla_resolution_date]\",",
+                "\"[QueryBug].[sla_resolution_met].[sla_resolution_met]\",",
+                "\"[QueryBug].[sla_response_date].[sla_response_date]\",",
+                "\"[QueryBug].[sla_response_met].[sla_response_met]\",",
+                "\"[QueryBug].[Soc Die].[Soc Die]\",",
+                "\"[QueryBug].[SOC Die Count].[SOC Die Count]\",",
+                "\"[QueryBug].[SOC_Die_Sorting_Desc].[SOC_Die_Sorting_Desc]\",",
+                "\"[QueryBug].[SoCDieForSorting].[SoCDieForSorting]\",",
+                "\"[QueryBug].[SoCFiled].[SoCFiled]\",",
+                "\"[QueryBug].[status].[status]\",",
+                "\"[QueryBug].[status_detail].[status_detail]\",",
+                "\"[QueryBug].[status_with_notbug].[status_with_notbug]\",",
+                "\"[QueryBug].[status_with_notbug_order].[status_with_notbug_order]\",",
+                "\"[QueryBug].[statusNameOrder].[statusNameOrder]\",",
+                "\"[QueryBug].[StatusOrder].[StatusOrder]\",",
+                "\"[QueryBug].[sub_bugcategory].[sub_bugcategory]\",",
+                "\"[QueryBug].[sub_bugcategory_nbr].[sub_bugcategory_nbr]\",",
+                "\"[QueryBug].[subbugcategory].[subbugcategory]\",",
+                "\"[QueryBug].[subip_family].[subip_family]\",",
+                "\"[QueryBug].[subip_supplier].[subip_supplier]\",",
+                "\"[QueryBug].[submitted_by].[submitted_by]\",",
+                "\"[QueryBug].[submitted_date].[submitted_date]\",",
+                "\"[QueryBug].[SubmittedYear].[SubmittedYear]\",",
+                "\"[QueryBug].[SubmittedYear_Quarter].[SubmittedYear_Quarter]\",",
+                "\"[QueryBug].[SubOrg].[SubOrg]\",",
+                "\"[QueryBug].[supplier_org].[supplier_org]\",",
+                "\"[QueryBug].[tag].[tag]\",",
+                "\"[QueryBug].[Tapein].[Tapein]\",",
+                "\"[QueryBug].[TapeinMilestone].[TapeinMilestone]\",",
+                "\"[QueryBug].[team_found].[team_found]\",",
+                "\"[QueryBug].[tenant].[tenant]\",",
+                "\"[QueryBug].[title].[title]\",",
+                "\"[QueryBug].[totalID].[totalID]\",",
+                "\"[QueryBug].[unique_ww_submitted_nbr].[unique_ww_submitted_nbr]\",",
+                "\"[QueryBug].[unique_ww_submitted_nbr_external].[unique_ww_submitted_nbr_external]\",",
+                "\"[QueryBug].[UniqueKey].[UniqueKey]\",",
+                "\"[QueryBug].[updated_by].[updated_by]\",",
+                "\"[QueryBug].[updated_date].[updated_date]\",",
+                "\"[QueryBug].[url].[url]\",",
+                "\"[QueryBug].[ww].[ww]\",",
+                "\"[QueryBug].[ww_closed_date].[ww_closed_date]\",",
+                "\"[QueryBug].[ww_future_stepping].[ww_future_stepping]\",",
+                "\"[QueryBug].[ww_not_future_stepping].[ww_not_future_stepping]\",",
+                "\"[QueryBug].[ww_submitted_date].[ww_submitted_date]\",",
+                "\"[QueryBug].[ww_submitted_nbr].[ww_submitted_nbr]\",",
+                "\"[QueryBug].[ww_submitted_trend_in_quarter].[ww_submitted_trend_in_quarter]\",",
+                "\"[QueryBug].[ww_trend].[ww_trend]\",",
+                "\"[QueryBug].[ww_updated_date].[ww_updated_date]\",",
+                "\"[QueryBug].[WWSubmittedSeqNbr].[WWSubmittedSeqNbr]\",",
+                "\"[QueryBug].[YearMonth_submitted].[YearMonth_submitted]\",",
+                "\"[QueryBug].[YearMonth_submitted_SeqNbr].[YearMonth_submitted_SeqNbr]\",",
+                "\"[QueryBug].[YearMonthDisplay].[YearMonthDisplay]\"}, {\"2019_SoCFiledBug\",",
+                "\"APBExclude\",",
+                "\"Base_BugEscape\",",
+                "\"bug_category\",",
+                "\"bugeco.env_found\",",
+                "\"bugeco.release_found\",",
+                "\"bugeco.team_found\",",
+                "\"bugeco.type\",",
+                "\"BugFixedDoneDate\",",
+                "\"BugsFiledbySoc\",",
+                "\"ccb_prq_gating\",",
+                "\"closed_date\",",
+                "\"component\",",
+                "\"Configuration\",",
+                "\"current_ww_trend_in_quarter\",",
+                "\"currentmonth\",",
+                "\"currentww\",",
+                "\"CurrentWWSeqNbr\",",
+                "\"currentyear\",",
+                "\"CurrentYearMonth\",",
+                "\"CurrentYearMonthSeqNbr\",",
+                "\"CurrentYearQuarter\",",
+                "\"CurrentYearQuarter_SeqNbr\",",
+                "\"DEG_Program\",",
+                "\"DEG_TapeIn\",",
+                "\"DEG_TapeIn_SeqNbr\",",
+                "\"DevSubOrg\",",
+                "\"env_found\",",
+                "\"Environment\",",
+                "\"Environment_order\",",
+                "\"Environment_with_order\",",
+                "\"family, soc\",",
+                "\"final_unique_ww_submitted_nbr\",",
+                "\"final_ww_future_stepping\",",
+                "\"FinalMinSetIDFutureStepping\",",
+                "\"from_subject\",",
+                "\"from_tenant\",",
+                "\"generation\",",
+                "\"Gladius\",",
+                "\"id\",",
+                "\"InternalBugIds\",",
+                "\"InternalvsProject\",",
+                "\"IPFamily\",",
+                "\"IPGCustomers\",",
+                "\"IPSupplier\",",
+                "\"is_active_bug\",",
+                "\"is_active_legend\",",
+                "\"is_cloned_from_ClientSOC\",",
+                "\"is_found_bySoc\",",
+                "\"is_new\",",
+                "\"is_PreSiPostSi\",",
+                "\"is_resolution_failed\",",
+                "\"is_resolution_met\",",
+                "\"is_response_failed\",",
+                "\"is_response_met\",",
+                "\"IsActiveIP\",",
+                "\"IsAnchorProduct\",",
+                "\"IsBlankRTL1p0Date\",",
+                "\"IsBugInternalFixedDateMatchWW_Submitted\",",
+                "\"IsClonedtoIPTenant\",",
+                "\"IsCount\",",
+                "\"IsFuturestepping\",",
+                "\"IsHIPSIPType\",",
+                "\"IsPIC\",",
+                "\"IsRealBug\",",
+                "\"IsSubIP\",",
+                "\"IsSubmittedLast13Wk\",",
+                "\"IsSubmittedLast2Wk\",",
+                "\"IsSubmittedLast4Month\",",
+                "\"IsSubmittedLast4WkToDate\",",
+                "\"IsSubmittedLast6Month\",",
+                "\"IsTestChip\",",
+                "\"IsTrackingorSupport\",",
+                "\"IsUnique\",",
+                "\"IsUnique_External\",",
+                "\"lineage\",",
+                "\"lineage_final\",",
+                "\"lineage_from_ClientSOC\",",
+                "\"Lineage_ID\",",
+                "\"Lineage_ID_Unique\",",
+                "\"milestone\",",
+                "\"MinSetID\",",
+                "\"MinSetID_External\",",
+                "\"MinSetIDFinal\",",
+                "\"MinSetIDFutureStepping\",",
+                "\"MinSetIDFutureStepping_w_NotABug\",",
+                "\"MinSetIDNotFutureStepping\",",
+                "\"Month\",",
+                "\"MonthNbr\",",
+                "\"NarendraSocDieSort\",",
+                "\"NoiseFilter\",",
+                "\"Org\",",
+                "\"original_family\",",
+                "\"original_lineage\",",
+                "\"owner\",",
+                "\"Platform\",",
+                "\"previousww\",",
+                "\"PreviousYear\",",
+                "\"PreviousYearMonth\",",
+                "\"PreviousYearQuarter\",",
+                "\"PreviousYearQuarter_nbr\",",
+                "\"priority\",",
+                "\"Process\",",
+                "\"project\",",
+                "\"project_short\",",
+                "\"project_step1\",",
+                "\"project_step2\",",
+                "\"Query_currentWW\",",
+                "\"release\",",
+                "\"release_affected\",",
+                "\"resolution_time_filter\",",
+                "\"resolutionSLA\",",
+                "\"response_time_filter\",",
+                "\"responseSLA\",",
+                "\"retro_analysis\",",
+                "\"retro_global_action\",",
+                "\"retro_global_learning\",",
+                "\"retro_ip_escape\",",
+                "\"retro_learnings\",",
+                "\"retro_status\",",
+                "\"RTL1p0Date\",",
+                "\"RTL1p0DateSeqNbr\",",
+                "\"RTL1p0Milestone\",",
+                "\"Sathi_check\",",
+                "\"sla_resolution_date\",",
+                "\"sla_resolution_met\",",
+                "\"sla_response_date\",",
+                "\"sla_response_met\",",
+                "\"Soc Die\",",
+                "\"SOC Die Count\",",
+                "\"SOC_Die_Sorting_Desc\",",
+                "\"SoCDieForSorting\",",
+                "\"SoCFiled\",",
+                "\"status\",",
+                "\"status_detail\",",
+                "\"status_with_notbug\",",
+                "\"status_with_notbug_order\",",
+                "\"statusNameOrder\",",
+                "\"StatusOrder\",",
+                "\"sub_bugcategory\",",
+                "\"sub_bugcategory_nbr\",",
+                "\"subbugcategory\",",
+                "\"subip_family\",",
+                "\"subip_supplier\",",
+                "\"submitted_by\",",
+                "\"submitted_date\",",
+                "\"SubmittedYear\",",
+                "\"SubmittedYear_Quarter\",",
+                "\"SubOrg\",",
+                "\"supplier_org\",",
+                "\"tag\",",
+                "\"Tapein\",",
+                "\"TapeinMilestone\",",
+                "\"team_found\",",
+                "\"tenant\",",
+                "\"title\",",
+                "\"totalID\",",
+                "\"unique_ww_submitted_nbr\",",
+                "\"unique_ww_submitted_nbr_external\",",
+                "\"UniqueKey\",",
+                "\"updated_by\",",
+                "\"updated_date\",",
+                "\"url\",",
+                "\"ww\",",
+                "\"ww_closed_date\",",
+                "\"ww_future_stepping\",",
+                "\"ww_not_future_stepping\",",
+                "\"ww_submitted_date\",",
+                "\"ww_submitted_nbr\",",
+                "\"ww_submitted_trend_in_quarter\",",
+                "\"ww_trend\",",
+                "\"ww_updated_date\",",
+                "\"WWSubmittedSeqNbr\",",
+                "\"YearMonth_submitted\",",
+                "\"YearMonth_submitted_SeqNbr\",",
+                "\"YearMonthDisplay\"}}",
+                "        })",
+                "in",
+                "    #\"Added Items\""
+              ]
+            }
+          }
+        ],
+        "measures": [
+          {
+            "name": "cust_func_open_bugs_cnt",
+            "expression": "CALCULATE(SUM([cust_func_open_bugs]))+0"
+          },
+          {
+            "name": "cust_non_func_open_bugs_cnt",
+            "expression": "CALCULATE(SUM([cust_non_func_open_bugs]))+0"
+          },
+          {
+            "name": "cust_func_all_bugs_cnt",
+            "expression": "CALCULATE(SUM([cust_func_bugs_all]))+0"
+          },
+          {
+            "name": "cust_non_func_all_bugs_cnt",
+            "expression": "CALCULATE(SUM([cust_non_func_bugs_all]))+0"
+          },
+          {
+            "name": "int_func_open_bugs_cnt",
+            "expression": "CALCULATE(SUM([func_bugs_open]))+0"
+          },
+          {
+            "name": "int_non_func_open_bugs_cnt",
+            "expression": "CALCULATE(SUM([non_func_bugs_open]))+0"
+          },
+          {
+            "name": "int_func_2wkopen_bugs_cnt",
+            "expression": "CALCULATE(SUM([func_bugs_open_2wks]))+0"
+          },
+          {
+            "name": "int_non_func_2wkopen_bugs_cnt",
+            "expression": "CALCULATE(SUM([non_func_bugs_open_2wks]))+0"
+          },
+          {
+            "name": "tot_bugs_cnt",
+            "expression": "CALCULATE(SUM([total_bugs]))+0"
+          }
+        ]
+      },
+      {
+        "name": "server_gk_branch",
+        "columns": [
+          {
+            "name": "id",
+            "dataType": "int64",
+            "sourceColumn": "id",
+            "sourceProviderType": "BigInt"
+          },
+          {
+            "name": "gk_branch",
+            "dataType": "string",
+            "sourceColumn": "gk_branch",
+            "sourceProviderType": "VarChar"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "server_gk_branch",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": [
+                "select distinct",
+                "id,",
+                "[server.bugeco.gk_branch] as gk_branch",
+                "from",
+                "[ES.server.bugeco]"
+              ],
+              "dataSource": "iBI"
+            },
+            "annotations": [
+              {
+                "name": "QueryEditorSerialization",
+                "value": [
+                  "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>select distinct",
+                  "id,",
+                  "[server.bugeco.gk_branch] as gk_branch",
+                  "from",
+                  "[ES.server.bugeco]</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+                ]
+              }
+            ]
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": [
+              "select distinct",
+              "id,",
+              "[server.bugeco.gk_branch] as gk_branch",
+              "from",
+              "[ES.server.bugeco]"
+            ]
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "server_gk_branch"
+          },
+          {
+            "name": "QueryEditorSerialization",
+            "value": [
+              "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>select distinct",
+              "id,",
+              "[server.bugeco.gk_branch] as gk_branch",
+              "from",
+              "[ES.server.bugeco]</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "IPData",
+        "columns": [
+          {
+            "name": "Arch_Lead_Name",
+            "dataType": "string",
+            "sourceColumn": "Arch_Lead_Name"
+          },
+          {
+            "name": "Architecture_Lead",
+            "dataType": "string",
+            "sourceColumn": "Architecture_Lead"
+          },
+          {
+            "name": "can_request",
+            "dataType": "string",
+            "sourceColumn": "can_request"
+          },
+          {
+            "name": "Configuration",
+            "dataType": "string",
+            "sourceColumn": "Configuration"
+          },
+          {
+            "name": "Dev_Lead",
+            "dataType": "string",
+            "sourceColumn": "Dev_Lead"
+          },
+          {
+            "name": "Dev_Lead_Name",
+            "dataType": "string",
+            "sourceColumn": "Dev_Lead_Name"
+          },
+          {
+            "name": "Exec_Lead_Name",
+            "dataType": "string",
+            "sourceColumn": "Exec_Lead_Name"
+          },
+          {
+            "name": "Execution_Lead",
+            "dataType": "string",
+            "sourceColumn": "Execution_Lead"
+          },
+          {
+            "name": "IPConfigurationID",
+            "dataType": "int64",
+            "sourceColumn": "IPConfigurationID"
+          },
+          {
+            "name": "IPFamily",
+            "dataType": "string",
+            "sourceColumn": "IPFamily"
+          },
+          {
+            "name": "ipgeneration",
+            "dataType": "string",
+            "sourceColumn": "ipgeneration"
+          },
+          {
+            "name": "IPSupplier",
+            "dataType": "string",
+            "sourceColumn": "IPSupplier"
+          },
+          {
+            "name": "IpType",
+            "dataType": "string",
+            "sourceColumn": "IpType"
+          },
+          {
+            "name": "is_hip",
+            "dataType": "string",
+            "sourceColumn": "is_hip"
+          },
+          {
+            "name": "IsClosed",
+            "dataType": "string",
+            "sourceColumn": "IsClosed"
+          },
+          {
+            "name": "IsUnrequestable",
+            "dataType": "string",
+            "sourceColumn": "IsUnrequestable"
+          },
+          {
+            "name": "Product_Owner",
+            "dataType": "string",
+            "sourceColumn": "Product_Owner"
+          },
+          {
+            "name": "Product_Owner_Name",
+            "dataType": "string",
+            "sourceColumn": "Product_Owner_Name"
+          },
+          {
+            "name": "Program_Manager",
+            "dataType": "string",
+            "sourceColumn": "Program_Manager"
+          },
+          {
+            "name": "Program_Manager_Name",
+            "dataType": "string",
+            "sourceColumn": "Program_Manager_Name"
+          },
+          {
+            "name": "status",
+            "dataType": "string",
+            "sourceColumn": "status"
+          },
+          {
+            "name": "SubOrg",
+            "dataType": "string",
+            "sourceColumn": "SubOrg"
+          },
+          {
+            "name": "Support_Lead",
+            "dataType": "string",
+            "sourceColumn": "Support_Lead"
+          },
+          {
+            "name": "Support_Lead_Name",
+            "dataType": "string",
+            "sourceColumn": "Support_Lead_Name"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Partition",
+            "dataView": "full",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = #\"AnalysisServices/IPG_Golden_Cube intel com;IPG_Golden_Cube\",",
+                "    Model1 = Source{[Id=\"Model\"]}[Data],",
+                "    Model2 = Model1{[Id=\"Model\"]}[Data],",
+                "    #\"Added Items\" = Cube.Transform(Model2,",
+                "        {",
+                "            {Cube.AddAndExpandDimensionColumn, \"[IPdata]\", {\"[IPdata].[Arch_Lead_Name].[Arch_Lead_Name]\", \"[IPdata].[Architecture_Lead].[Architecture_Lead]\", \"[IPdata].[can_request].[can_request]\", \"[IPdata].[Configuration].[Configuration]\", \"[IPdata].[Dev_Lead].[Dev_Lead]\", \"[IPdata].[Dev_Lead_Name].[Dev_Lead_Name]\", \"[IPdata].[Exec_Lead_Name].[Exec_Lead_Name]\", \"[IPdata].[Execution_Lead].[Execution_Lead]\", \"[IPdata].[IPConfigurationID].[IPConfigurationID]\", \"[IPdata].[IPFamily].[IPFamily]\", \"[IPdata].[ipgeneration].[ipgeneration]\", \"[IPdata].[IPSupplier].[IPSupplier]\", \"[IPdata].[IpType].[IpType]\", \"[IPdata].[is_hip].[is_hip]\", \"[IPdata].[IsClosed].[IsClosed]\", \"[IPdata].[IsUnrequestable].[IsUnrequestable]\", \"[IPdata].[Product_Owner].[Product_Owner]\", \"[IPdata].[Product_Owner_Name].[Product_Owner_Name]\", \"[IPdata].[Program_Manager].[Program_Manager]\", \"[IPdata].[Program_Manager_Name].[Program_Manager_Name]\", \"[IPdata].[status].[status]\", \"[IPdata].[SubOrg].[SubOrg]\", \"[IPdata].[Support_Lead].[Support_Lead]\", \"[IPdata].[Support_Lead_Name].[Support_Lead_Name]\"}, ",
+                "{\"Arch_Lead_Name\", \"Architecture_Lead\", \"can_request\", \"Configuration\", \"Dev_Lead\", \"Dev_Lead_Name\", \"Exec_Lead_Name\", \"Execution_Lead\", \"IPConfigurationID\", \"IPFamily\", \"ipgeneration\", \"IPSupplier\", \"IpType\", \"is_hip\", \"IsClosed\", \"IsUnrequestable\", \"Product_Owner\", \"Product_Owner_Name\", \"Program_Manager\", \"Program_Manager_Name\", \"status\", \"SubOrg\", \"Support_Lead\", \"Support_Lead_Name\"}}",
+                "        })",
+                "in",
+                "    #\"Added Items\""
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "Master_list",
+        "columns": [
+          {
+            "type": "calculatedTableColumn",
+            "name": "configuration",
+            "dataType": "string",
+            "isNameInferred": true,
+            "isDataTypeInferred": true,
+            "sourceColumn": "[configuration]"
+          },
+          {
+            "type": "calculatedTableColumn",
+            "name": "branch",
+            "dataType": "string",
+            "isNameInferred": true,
+            "isDataTypeInferred": true,
+            "sourceColumn": "[branch]"
+          },
+          {
+            "type": "calculated",
+            "name": "map",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": "IF(ISBLANK([configuration]), \"no release\"&[branch], [configuration]&[branch])"
+          },
+          {
+            "type": "calculated",
+            "name": "IPFamily",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": "LOOKUPVALUE(IPData[IPFamily], IPData[Configuration], Master_list[configuration])"
+          },
+          {
+            "type": "calculated",
+            "name": "SubOrg",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": "LOOKUPVALUE(IPData[SubOrg], IPData[Configuration], Master_list[configuration])"
+          },
+          {
+            "type": "calculated",
+            "name": "IPSupplier",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": "LOOKUPVALUE(IPData[IPSupplier], IPData[Configuration], Master_list[configuration])"
+          },
+          {
+            "type": "calculated",
+            "name": "refresh_time",
+            "dataType": "dateTime",
+            "isDataTypeInferred": true,
+            "expression": "now()",
+            "formatString": "M/d/yyyy h:mm:ss AM/PM",
+            "annotations": [
+              {
+                "name": "Format",
+                "value": "<Format Format=\"DateTimeCustom\"><DateTimes><DateTime LCID=\"1033\" Group=\"GeneralLongDateTime\" FormatString=\"M/d/yyyy h:mm:ss tt\" /></DateTimes></Format>"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "CalculatedTable 1",
+            "source": {
+              "type": "calculated",
+              "expression": "DISTINCT(UNION(SELECTCOLUMNS(IPG_Bug, \"configuration\", [release], \"branch\", [gk_branch_mod]), SELECTCOLUMNS(Coverage, \"configuration\", [COVERAGE_ALL.Configuration], \"branch\", [branch_mod]), SELECTCOLUMNS(Regression, \"configuration\", [REGRESSIONS_ALL.IPConfiguration], \"branch\", [branch_mod])))"
+            }
+          }
+        ]
+      },
+      {
+        "name": "model_branch_list",
+        "columns": [
+          {
+            "type": "calculatedTableColumn",
+            "name": "COVERAGE_ALL.branch",
+            "dataType": "string",
+            "isNameInferred": true,
+            "isDataTypeInferred": true,
+            "sourceColumn": "Coverage[COVERAGE_ALL.branch]"
+          },
+          {
+            "type": "calculatedTableColumn",
+            "name": "COVERAGE_ALL.version_final",
+            "dataType": "string",
+            "isNameInferred": true,
+            "isDataTypeInferred": true,
+            "sourceColumn": "Coverage[COVERAGE_ALL.version_final]"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "CalculatedTable 1",
+            "source": {
+              "type": "calculated",
+              "expression": "SUMMARIZECOLUMNS(Coverage[COVERAGE_ALL.branch], Coverage[COVERAGE_ALL.version_final])"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Coverage",
+        "columns": [
+          {
+            "name": "COVERAGE_ALL.branch",
+            "dataType": "string",
+            "sourceColumn": "COVERAGE_ALL.branch"
+          },
+          {
+            "name": "COVERAGE_ALL.color_category",
+            "dataType": "string",
+            "sourceColumn": "COVERAGE_ALL.color_category"
+          },
+          {
+            "name": "COVERAGE_ALL.Configuration",
+            "dataType": "string",
+            "sourceColumn": "COVERAGE_ALL.Configuration"
+          },
+          {
+            "name": "COVERAGE_ALL.Coverage",
+            "dataType": "double",
+            "sourceColumn": "COVERAGE_ALL.Coverage"
+          },
+          {
+            "name": "COVERAGE_ALL.coverage_type",
+            "dataType": "string",
+            "sourceColumn": "COVERAGE_ALL.coverage_type"
+          },
+          {
+            "name": "COVERAGE_ALL.Covered",
+            "dataType": "string",
+            "sourceColumn": "COVERAGE_ALL.Covered"
+          },
+          {
+            "name": "COVERAGE_ALL.Expected",
+            "dataType": "string",
+            "sourceColumn": "COVERAGE_ALL.Expected"
+          },
+          {
+            "name": "COVERAGE_ALL.generation",
+            "dataType": "string",
+            "sourceColumn": "COVERAGE_ALL.generation"
+          },
+          {
+            "name": "COVERAGE_ALL.HVP",
+            "dataType": "string",
+            "sourceColumn": "COVERAGE_ALL.HVP"
+          },
+          {
+            "name": "COVERAGE_ALL.ind_metric",
+            "dataType": "string",
+            "sourceColumn": "COVERAGE_ALL.ind_metric"
+          },
+          {
+            "name": "COVERAGE_ALL.IP",
+            "dataType": "string",
+            "sourceColumn": "COVERAGE_ALL.IP"
+          },
+          {
+            "name": "COVERAGE_ALL.latest",
+            "dataType": "string",
+            "sourceColumn": "COVERAGE_ALL.latest"
+          },
+          {
+            "name": "COVERAGE_ALL.Metric",
+            "dataType": "string",
+            "sourceColumn": "COVERAGE_ALL.Metric"
+          },
+          {
+            "name": "COVERAGE_ALL.Missed",
+            "dataType": "string",
+            "sourceColumn": "COVERAGE_ALL.Missed"
+          },
+          {
+            "name": "COVERAGE_ALL.model",
+            "dataType": "string",
+            "sourceColumn": "COVERAGE_ALL.model"
+          },
+          {
+            "name": "COVERAGE_ALL.Period",
+            "dataType": "string",
+            "sourceColumn": "COVERAGE_ALL.Period"
+          },
+          {
+            "name": "COVERAGE_ALL.refreshed_date",
+            "dataType": "string",
+            "sourceColumn": "COVERAGE_ALL.refreshed_date"
+          },
+          {
+            "name": "COVERAGE_ALL.source",
+            "dataType": "string",
+            "sourceColumn": "COVERAGE_ALL.source"
+          },
+          {
+            "name": "COVERAGE_ALL.subcomponent",
+            "dataType": "string",
+            "sourceColumn": "COVERAGE_ALL.subcomponent"
+          },
+          {
+            "name": "COVERAGE_ALL.target",
+            "dataType": "string",
+            "sourceColumn": "COVERAGE_ALL.target"
+          },
+          {
+            "name": "COVERAGE_ALL.TreeName",
+            "dataType": "string",
+            "sourceColumn": "COVERAGE_ALL.TreeName"
+          },
+          {
+            "name": "COVERAGE_ALL.TreePath",
+            "dataType": "string",
+            "sourceColumn": "COVERAGE_ALL.TreePath"
+          },
+          {
+            "name": "COVERAGE_ALL.version",
+            "dataType": "string",
+            "sourceColumn": "COVERAGE_ALL.version"
+          },
+          {
+            "name": "COVERAGE_ALL.version_final",
+            "dataType": "string",
+            "sourceColumn": "COVERAGE_ALL.version_final"
+          },
+          {
+            "name": "COVERAGE_ALL.WW",
+            "dataType": "string",
+            "sourceColumn": "COVERAGE_ALL.WW"
+          },
+          {
+            "type": "calculated",
+            "name": "map",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": "[COVERAGE_ALL.Configuration]&[branch_mod]"
+          },
+          {
+            "type": "calculated",
+            "name": "color_plus",
+            "dataType": "double",
+            "isDataTypeInferred": true,
+            "expression": "if(ISBLANK([COVERAGE_ALL.color_category]), IF(VALUE([COVERAGE_ALL.Coverage]) < 90, 2, IF(VALUE([COVERAGE_ALL.Coverage]) <= 95, 1, 0)), value([COVERAGE_ALL.color_category])) "
+          },
+          {
+            "type": "calculated",
+            "name": "latest_version",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": "IF([COVERAGE_ALL.version_final] = CALCULATE(MAX([COVERAGE_ALL.version_final]), FILTER(Coverage, [COVERAGE_ALL.Configuration]= EARLIER([COVERAGE_ALL.Configuration])),FILTER(Coverage, [COVERAGE_ALL.branch] = EARLIER([COVERAGE_ALL.branch]))   ), \"latest\", [COVERAGE_ALL.version_final])"
+          },
+          {
+            "type": "calculated",
+            "name": "latest_final",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": "IF([latest_version] = \"latest\" && [latest_ww] = \"latest\", \"latest\", [latest_version] & \":\" & [latest_ww])"
+          },
+          {
+            "type": "calculated",
+            "name": "ww_num",
+            "dataType": "int64",
+            "isDataTypeInferred": false,
+            "expression": "VALUE([COVERAGE_ALL.WW])",
+            "formatString": "0"
+          },
+          {
+            "type": "calculated",
+            "name": "latest_ww",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": "if([ww_num] = CALCULATE(MAX(Coverage[ww_num]), FILTER(Coverage, Coverage[COVERAGE_ALL.Configuration] = EARLIER(Coverage[COVERAGE_ALL.Configuration]))), \"latest\", [ww_num]&\"\")"
+          },
+          {
+            "type": "calculated",
+            "name": "branch_mod",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": "if(ISBLANK([COVERAGE_ALL.branch]), \"no branch\", Coverage[COVERAGE_ALL.branch])"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Partition",
+            "dataView": "full",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = #\"AnalysisServices/IPG_Functional_and_Code_Coverage intel com;IPG_Functional_and_C\",",
+                "    Model1 = Source{[Id=\"Model\"]}[Data],",
+                "    Model2 = Model1{[Id=\"Model\"]}[Data],",
+                "    #\"Added Items\" = Cube.Transform(Model2,",
+                "        {",
+                "            {Cube.AddAndExpandDimensionColumn, \"[COVERAGE_ALL]\", {\"[COVERAGE_ALL].[branch].[branch]\", \"[COVERAGE_ALL].[color_category].[color_category]\", \"[COVERAGE_ALL].[Configuration].[Configuration]\", \"[COVERAGE_ALL].[Coverage].[Coverage]\", \"[COVERAGE_ALL].[coverage_type].[coverage_type]\", \"[COVERAGE_ALL].[Covered].[Covered]\", \"[COVERAGE_ALL].[Expected].[Expected]\", \"[COVERAGE_ALL].[generation].[generation]\", \"[COVERAGE_ALL].[HVP].[HVP]\", \"[COVERAGE_ALL].[ind_metric].[ind_metric]\", \"[COVERAGE_ALL].[IP].[IP]\", \"[COVERAGE_ALL].[latest].[latest]\", \"[COVERAGE_ALL].[Metric].[Metric]\", \"[COVERAGE_ALL].[Missed].[Missed]\", \"[COVERAGE_ALL].[model].[model]\", \"[COVERAGE_ALL].[Period].[Period]\", \"[COVERAGE_ALL].[refreshed_date].[refreshed_date]\", \"[COVERAGE_ALL].[source].[source]\", \"[COVERAGE_ALL].[subcomponent].[subcomponent]\", \"[COVERAGE_ALL].[target].[target]\", \"[COVERAGE_ALL].[TreeName].[TreeName]\", \"[COVERAGE_ALL].[TreePath].[TreePath]\", \"[COVERAGE_ALL].[version].[version]\", \"[COVERAGE_ALL].[version_final].[version_final]\", \"[COVERAGE_ALL].[WW].[WW]\"}, {\"COVERAGE_ALL.branch\", \"COVERAGE_ALL.color_category\", \"COVERAGE_ALL.Configuration\", \"COVERAGE_ALL.Coverage\", \"COVERAGE_ALL.coverage_type\", \"COVERAGE_ALL.Covered\", \"COVERAGE_ALL.Expected\", \"COVERAGE_ALL.generation\", \"COVERAGE_ALL.HVP\", \"COVERAGE_ALL.ind_metric\", \"COVERAGE_ALL.IP\", \"COVERAGE_ALL.latest\", \"COVERAGE_ALL.Metric\", \"COVERAGE_ALL.Missed\", \"COVERAGE_ALL.model\", \"COVERAGE_ALL.Period\", \"COVERAGE_ALL.refreshed_date\", \"COVERAGE_ALL.source\", \"COVERAGE_ALL.subcomponent\", \"COVERAGE_ALL.target\", \"COVERAGE_ALL.TreeName\", \"COVERAGE_ALL.TreePath\", \"COVERAGE_ALL.version\", \"COVERAGE_ALL.version_final\", \"COVERAGE_ALL.WW\"}}",
+                "        })",
+                "in",
+                "    #\"Added Items\""
+              ]
+            }
+          }
+        ],
+        "measures": [
+          {
+            "name": "color_sum",
+            "expression": "\"(\"&CALCULATE(COUNT([color_plus])+0, FILTER(Coverage, Coverage[color_plus] = 0)) & \",\" &CALCULATE(COUNT([color_plus])+0, FILTER(Coverage, Coverage[color_plus] = 1)) & \",\" &CALCULATE(COUNT([color_plus])+0, FILTER(Coverage, Coverage[color_plus] = 2)) & \")\" "
+          },
+          {
+            "name": "color_sum_latest",
+            "expression": "CALCULATE([color_sum], FILTER(Coverage, Coverage[latest_final] = \"latest\"))"
+          },
+          {
+            "name": "color_plus_latest",
+            "expression": "CALCULATE(MAX(Coverage[color_plus]), FILTER(Coverage, Coverage[latest_final] = \"latest\"))"
+          },
+          {
+            "name": "cov_code_avg",
+            "expression": "CALCULATE(ROUND(AVERAGE(Coverage[COVERAGE_ALL.Coverage]), 2) , FILTER(Coverage, Coverage[latest_final] = \"latest\" && [COVERAGE_ALL.TreeName] = \"cicg_code_coverage\"))"
+          },
+          {
+            "name": "cov_func_avg",
+            "expression": "CALCULATE(ROUND(AVERAGE(Coverage[COVERAGE_ALL.Coverage]), 2) , FILTER(Coverage, Coverage[latest_final] = \"latest\" && [COVERAGE_ALL.TreeName] = \"cicg_functional_coverage\"))"
+          },
+          {
+            "name": "cov_code_color",
+            "expression": " var max_target = MAX(Coverage[COVERAGE_ALL.target]) return IF(ISBLANK([cov_code_avg]), blank(), if([cov_code_avg] < max_target - max_target * .1, 2, IF([cov_code_avg] < max_target - max_target * .03, 1, 0)) )"
+          },
+          {
+            "name": "cov_func_color",
+            "expression": " var max_target = MAX(Coverage[COVERAGE_ALL.target]) return IF(ISBLANK([cov_func_avg]), blank(), if([cov_func_avg] < max_target - max_target * .1, 2, IF([cov_func_avg] < max_target - max_target * .03, 1, 0)) )"
+          }
+        ]
+      },
+      {
+        "name": "Regression",
+        "columns": [
+          {
+            "name": "REGRESSIONS_ALL.ace_model",
+            "dataType": "string",
+            "sourceColumn": "REGRESSIONS_ALL.ace_model"
+          },
+          {
+            "name": "REGRESSIONS_ALL.auto_rerun",
+            "dataType": "string",
+            "sourceColumn": "REGRESSIONS_ALL.auto_rerun"
+          },
+          {
+            "name": "REGRESSIONS_ALL.branch",
+            "dataType": "string",
+            "sourceColumn": "REGRESSIONS_ALL.branch"
+          },
+          {
+            "name": "REGRESSIONS_ALL.color_category",
+            "dataType": "string",
+            "sourceColumn": "REGRESSIONS_ALL.color_category"
+          },
+          {
+            "name": "REGRESSIONS_ALL.dut",
+            "dataType": "string",
+            "sourceColumn": "REGRESSIONS_ALL.dut"
+          },
+          {
+            "name": "REGRESSIONS_ALL.fail_count",
+            "dataType": "int64",
+            "sourceColumn": "REGRESSIONS_ALL.fail_count"
+          },
+          {
+            "name": "REGRESSIONS_ALL.fail_feeder_count",
+            "dataType": "int64",
+            "sourceColumn": "REGRESSIONS_ALL.fail_feeder_count"
+          },
+          {
+            "name": "REGRESSIONS_ALL.geode",
+            "dataType": "string",
+            "sourceColumn": "REGRESSIONS_ALL.geode"
+          },
+          {
+            "name": "REGRESSIONS_ALL.group_name",
+            "dataType": "string",
+            "sourceColumn": "REGRESSIONS_ALL.group_name"
+          },
+          {
+            "name": "REGRESSIONS_ALL.IPConfiguration",
+            "dataType": "string",
+            "sourceColumn": "REGRESSIONS_ALL.IPConfiguration"
+          },
+          {
+            "name": "REGRESSIONS_ALL.killed_count",
+            "dataType": "int64",
+            "sourceColumn": "REGRESSIONS_ALL.killed_count"
+          },
+          {
+            "name": "REGRESSIONS_ALL.latest",
+            "dataType": "string",
+            "sourceColumn": "REGRESSIONS_ALL.latest"
+          },
+          {
+            "name": "REGRESSIONS_ALL.latest_model_version",
+            "dataType": "string",
+            "sourceColumn": "REGRESSIONS_ALL.latest_model_version"
+          },
+          {
+            "name": "REGRESSIONS_ALL.metric",
+            "dataType": "string",
+            "sourceColumn": "REGRESSIONS_ALL.metric"
+          },
+          {
+            "name": "REGRESSIONS_ALL.model_version",
+            "dataType": "string",
+            "sourceColumn": "REGRESSIONS_ALL.model_version"
+          },
+          {
+            "name": "REGRESSIONS_ALL.model_version_final",
+            "dataType": "string",
+            "sourceColumn": "REGRESSIONS_ALL.model_version_final"
+          },
+          {
+            "name": "REGRESSIONS_ALL.model_version_parsed",
+            "dataType": "string",
+            "sourceColumn": "REGRESSIONS_ALL.model_version_parsed"
+          },
+          {
+            "name": "REGRESSIONS_ALL.model_version_parsed_check",
+            "dataType": "string",
+            "sourceColumn": "REGRESSIONS_ALL.model_version_parsed_check"
+          },
+          {
+            "name": "REGRESSIONS_ALL.pass_count",
+            "dataType": "int64",
+            "sourceColumn": "REGRESSIONS_ALL.pass_count"
+          },
+          {
+            "name": "REGRESSIONS_ALL.Reg_Pass_Rate",
+            "dataType": "double",
+            "sourceColumn": "REGRESSIONS_ALL.Reg_Pass_Rate"
+          },
+          {
+            "name": "REGRESSIONS_ALL.simregress_project",
+            "dataType": "string",
+            "sourceColumn": "REGRESSIONS_ALL.simregress_project"
+          },
+          {
+            "name": "REGRESSIONS_ALL.source",
+            "dataType": "string",
+            "sourceColumn": "REGRESSIONS_ALL.source"
+          },
+          {
+            "name": "REGRESSIONS_ALL.stepping",
+            "dataType": "string",
+            "sourceColumn": "REGRESSIONS_ALL.stepping"
+          },
+          {
+            "name": "REGRESSIONS_ALL.submit_count",
+            "dataType": "int64",
+            "sourceColumn": "REGRESSIONS_ALL.submit_count"
+          },
+          {
+            "name": "REGRESSIONS_ALL.submitted_date",
+            "dataType": "string",
+            "sourceColumn": "REGRESSIONS_ALL.submitted_date"
+          },
+          {
+            "name": "REGRESSIONS_ALL.tag",
+            "dataType": "string",
+            "sourceColumn": "REGRESSIONS_ALL.tag"
+          },
+          {
+            "name": "REGRESSIONS_ALL.target",
+            "dataType": "double",
+            "sourceColumn": "REGRESSIONS_ALL.target"
+          },
+          {
+            "name": "REGRESSIONS_ALL.team",
+            "dataType": "string",
+            "sourceColumn": "REGRESSIONS_ALL.team"
+          },
+          {
+            "name": "REGRESSIONS_ALL.test_name",
+            "dataType": "string",
+            "sourceColumn": "REGRESSIONS_ALL.test_name"
+          },
+          {
+            "name": "REGRESSIONS_ALL.testlist_id",
+            "dataType": "string",
+            "sourceColumn": "REGRESSIONS_ALL.testlist_id"
+          },
+          {
+            "name": "REGRESSIONS_ALL.testlist_name",
+            "dataType": "string",
+            "sourceColumn": "REGRESSIONS_ALL.testlist_name"
+          },
+          {
+            "name": "REGRESSIONS_ALL.version_final",
+            "dataType": "string",
+            "sourceColumn": "REGRESSIONS_ALL.version_final"
+          },
+          {
+            "name": "REGRESSIONS_ALL.workweek",
+            "dataType": "string",
+            "sourceColumn": "REGRESSIONS_ALL.workweek"
+          },
+          {
+            "name": "REGRESSIONS_ALL.ww_num",
+            "dataType": "string",
+            "sourceColumn": "REGRESSIONS_ALL.ww_num"
+          },
+          {
+            "type": "calculated",
+            "name": "map",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": "[REGRESSIONS_ALL.IPConfiguration]&[branch_mod]"
+          },
+          {
+            "type": "calculated",
+            "name": "color_plus",
+            "dataType": "int64",
+            "isDataTypeInferred": true,
+            "expression": "IF(ISBLANK([REGRESSIONS_ALL.color_category]), IF([REGRESSIONS_ALL.Reg_Pass_Rate] < 90, 2, IF([REGRESSIONS_ALL.Reg_Pass_Rate] <= 98, 1, 0)))"
+          },
+          {
+            "type": "calculated",
+            "name": "total_tests",
+            "dataType": "int64",
+            "isDataTypeInferred": true,
+            "expression": "[REGRESSIONS_ALL.fail_count] + [REGRESSIONS_ALL.fail_feeder_count] + [REGRESSIONS_ALL.submit_count] + [REGRESSIONS_ALL.killed_count] + [REGRESSIONS_ALL.pass_count]"
+          },
+          {
+            "type": "calculated",
+            "name": "branch_mod",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": "IF(ISBLANK([REGRESSIONS_ALL.branch]), \"no branch\", [REGRESSIONS_ALL.branch])"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Partition",
+            "dataView": "full",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = #\"AnalysisServices/IPG_Regression intel com;IPG_Regression\",",
+                "    Model1 = Source{[Id=\"Model\"]}[Data],",
+                "    Model2 = Model1{[Id=\"Model\"]}[Data],",
+                "    #\"Added Items\" = Cube.Transform(Model2,",
+                "        {",
+                "            {Cube.AddAndExpandDimensionColumn, \"[REGRESSIONS_ALL]\", {\"[REGRESSIONS_ALL].[ace_model].[ace_model]\", \"[REGRESSIONS_ALL].[auto_rerun].[auto_rerun]\", \"[REGRESSIONS_ALL].[branch].[branch]\", \"[REGRESSIONS_ALL].[color_category].[color_category]\", \"[REGRESSIONS_ALL].[dut].[dut]\", \"[REGRESSIONS_ALL].[fail_count].[fail_count]\", \"[REGRESSIONS_ALL].[fail_feeder_count].[fail_feeder_count]\", \"[REGRESSIONS_ALL].[geode].[geode]\", \"[REGRESSIONS_ALL].[group_name].[group_name]\", \"[REGRESSIONS_ALL].[IPConfiguration].[IPConfiguration]\", \"[REGRESSIONS_ALL].[killed_count].[killed_count]\", \"[REGRESSIONS_ALL].[latest].[latest]\", \"[REGRESSIONS_ALL].[latest_model_version].[latest_model_version]\", \"[REGRESSIONS_ALL].[metric].[metric]\", \"[REGRESSIONS_ALL].[model_version].[model_version]\", \"[REGRESSIONS_ALL].[model_version_final].[model_version_final]\", \"[REGRESSIONS_ALL].[model_version_parsed].[model_version_parsed]\", \"[REGRESSIONS_ALL].[model_version_parsed_check].[model_version_parsed_check]\", \"[REGRESSIONS_ALL].[pass_count].[pass_count]\", \"[REGRESSIONS_ALL].[Reg_Pass_Rate].[Reg_Pass_Rate]\", \"[REGRESSIONS_ALL].[simregress_project].[simregress_project]\", \"[REGRESSIONS_ALL].[source].[source]\", \"[REGRESSIONS_ALL].[stepping].[stepping]\", \"[REGRESSIONS_ALL].[submit_count].[submit_count]\", \"[REGRESSIONS_ALL].[submitted_date].[submitted_date]\", \"[REGRESSIONS_ALL].[tag].[tag]\", \"[REGRESSIONS_ALL].[target].[target]\", \"[REGRESSIONS_ALL].[team].[team]\", \"[REGRESSIONS_ALL].[test_name].[test_name]\", \"[REGRESSIONS_ALL].[testlist_id].[testlist_id]\", \"[REGRESSIONS_ALL].[testlist_name].[testlist_name]\", \"[REGRESSIONS_ALL].[version_final].[version_final]\", \"[REGRESSIONS_ALL].[workweek].[workweek]\", \"[REGRESSIONS_ALL].[ww_num].[ww_num]\"}, {\"REGRESSIONS_ALL.ace_model\", \"REGRESSIONS_ALL.auto_rerun\", \"REGRESSIONS_ALL.branch\", \"REGRESSIONS_ALL.color_category\", \"REGRESSIONS_ALL.dut\", \"REGRESSIONS_ALL.fail_count\", \"REGRESSIONS_ALL.fail_feeder_count\", \"REGRESSIONS_ALL.geode\", \"REGRESSIONS_ALL.group_name\", \"REGRESSIONS_ALL.IPConfiguration\", \"REGRESSIONS_ALL.killed_count\", \"REGRESSIONS_ALL.latest\", \"REGRESSIONS_ALL.latest_model_version\", \"REGRESSIONS_ALL.metric\", \"REGRESSIONS_ALL.model_version\", \"REGRESSIONS_ALL.model_version_final\", \"REGRESSIONS_ALL.model_version_parsed\", \"REGRESSIONS_ALL.model_version_parsed_check\", \"REGRESSIONS_ALL.pass_count\", \"REGRESSIONS_ALL.Reg_Pass_Rate\", \"REGRESSIONS_ALL.simregress_project\", \"REGRESSIONS_ALL.source\", \"REGRESSIONS_ALL.stepping\", \"REGRESSIONS_ALL.submit_count\", \"REGRESSIONS_ALL.submitted_date\", \"REGRESSIONS_ALL.tag\", \"REGRESSIONS_ALL.target\", \"REGRESSIONS_ALL.team\", \"REGRESSIONS_ALL.test_name\", \"REGRESSIONS_ALL.testlist_id\", \"REGRESSIONS_ALL.testlist_name\", \"REGRESSIONS_ALL.version_final\", \"REGRESSIONS_ALL.workweek\", \"REGRESSIONS_ALL.ww_num\"}}",
+                "        })",
+                "in",
+                "    #\"Added Items\""
+              ]
+            }
+          }
+        ],
+        "measures": [
+          {
+            "name": "reg_cumm",
+            "expression": "CALCULATE(round(SUM([REGRESSIONS_ALL.pass_count]) / SUM([total_tests]) * 100, 2) )"
+          },
+          {
+            "name": "color_cumm",
+            "expression": "if(ISBLANK([reg_cumm]), BLANK(), IF([reg_cumm] < 90, 2, IF([reg_cumm]<= 98, 1, 0)))"
+          },
+          {
+            "name": "reg_cumm_latest",
+            "expression": "CALCULATE([reg_cumm], FILTER(Regression, Regression[REGRESSIONS_ALL.latest_model_version] = \"latest\"))"
+          },
+          {
+            "name": "color_cumm_latest",
+            "expression": "if(ISBLANK([reg_cumm_latest]), blank(),  IF([reg_cumm_latest] < 90, 2, IF([reg_cumm_latest]<= 98, 1, 0)))"
+          }
+        ]
+      },
+      {
+        "name": "Triage",
+        "columns": [
+          {
+            "name": "ALL_triage.ace_model",
+            "dataType": "string",
+            "sourceColumn": "ALL_triage.ace_model"
+          },
+          {
+            "name": "ALL_triage.auto_rerun",
+            "dataType": "string",
+            "sourceColumn": "ALL_triage.auto_rerun"
+          },
+          {
+            "name": "ALL_triage.branch",
+            "dataType": "string",
+            "sourceColumn": "ALL_triage.branch"
+          },
+          {
+            "name": "ALL_triage.bucket_id",
+            "dataType": "string",
+            "sourceColumn": "ALL_triage.bucket_id"
+          },
+          {
+            "name": "ALL_triage.bucket_name",
+            "dataType": "string",
+            "sourceColumn": "ALL_triage.bucket_name"
+          },
+          {
+            "name": "ALL_triage.debugged_count",
+            "dataType": "int64",
+            "sourceColumn": "ALL_triage.debugged_count"
+          },
+          {
+            "name": "ALL_triage.debugger",
+            "dataType": "string",
+            "sourceColumn": "ALL_triage.debugger"
+          },
+          {
+            "name": "ALL_triage.dut",
+            "dataType": "string",
+            "sourceColumn": "ALL_triage.dut"
+          },
+          {
+            "name": "ALL_triage.geode",
+            "dataType": "string",
+            "sourceColumn": "ALL_triage.geode"
+          },
+          {
+            "name": "ALL_triage.group_name",
+            "dataType": "string",
+            "sourceColumn": "ALL_triage.group_name"
+          },
+          {
+            "name": "ALL_triage.ip_config_id",
+            "dataType": "string",
+            "sourceColumn": "ALL_triage.ip_config_id"
+          },
+          {
+            "name": "ALL_triage.IPConfiguration",
+            "dataType": "string",
+            "sourceColumn": "ALL_triage.IPConfiguration"
+          },
+          {
+            "name": "ALL_triage.latst_model_version",
+            "dataType": "string",
+            "sourceColumn": "ALL_triage.latst_model_version"
+          },
+          {
+            "name": "ALL_triage.model",
+            "dataType": "string",
+            "sourceColumn": "ALL_triage.model"
+          },
+          {
+            "name": "ALL_triage.model_version",
+            "dataType": "string",
+            "sourceColumn": "ALL_triage.model_version"
+          },
+          {
+            "name": "ALL_triage.model_version_final",
+            "dataType": "string",
+            "sourceColumn": "ALL_triage.model_version_final"
+          },
+          {
+            "name": "ALL_triage.model_version_parsed",
+            "dataType": "string",
+            "sourceColumn": "ALL_triage.model_version_parsed"
+          },
+          {
+            "name": "ALL_triage.model_version_parsed_check",
+            "dataType": "string",
+            "sourceColumn": "ALL_triage.model_version_parsed_check"
+          },
+          {
+            "name": "ALL_triage.new_count",
+            "dataType": "int64",
+            "sourceColumn": "ALL_triage.new_count"
+          },
+          {
+            "name": "ALL_triage.stepping",
+            "dataType": "string",
+            "sourceColumn": "ALL_triage.stepping"
+          },
+          {
+            "name": "ALL_triage.subcomponent",
+            "dataType": "string",
+            "sourceColumn": "ALL_triage.subcomponent"
+          },
+          {
+            "name": "ALL_triage.submitted_date",
+            "dataType": "string",
+            "sourceColumn": "ALL_triage.submitted_date"
+          },
+          {
+            "name": "ALL_triage.team",
+            "dataType": "string",
+            "sourceColumn": "ALL_triage.team"
+          },
+          {
+            "name": "ALL_triage.test_name",
+            "dataType": "string",
+            "sourceColumn": "ALL_triage.test_name"
+          },
+          {
+            "name": "ALL_triage.testlist_release_id",
+            "dataType": "string",
+            "sourceColumn": "ALL_triage.testlist_release_id"
+          },
+          {
+            "name": "ALL_triage.workweek",
+            "dataType": "string",
+            "sourceColumn": "ALL_triage.workweek"
+          },
+          {
+            "type": "calculated",
+            "name": "map",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": "[ALL_triage.IPConfiguration]&[branch_mod]"
+          },
+          {
+            "type": "calculated",
+            "name": "branch_mod",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": "IF(ISBLANK([ALL_Triage.branch]), \"no branch\", [ALL_triage.branch])"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Partition",
+            "dataView": "full",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = #\"AnalysisServices/IPG_Regression intel com;IPG_Regression\",",
+                "    Model1 = Source{[Id=\"Model\"]}[Data],",
+                "    Model2 = Model1{[Id=\"Model\"]}[Data],",
+                "    #\"Added Items\" = Cube.Transform(Model2,",
+                "        {",
+                "            {Cube.AddAndExpandDimensionColumn, \"[ALL_triage]\", {\"[ALL_triage].[ace_model].[ace_model]\", \"[ALL_triage].[auto_rerun].[auto_rerun]\", \"[ALL_triage].[branch].[branch]\", \"[ALL_triage].[bucket_id].[bucket_id]\", \"[ALL_triage].[bucket_name].[bucket_name]\", \"[ALL_triage].[debugged_count].[debugged_count]\", \"[ALL_triage].[debugger].[debugger]\", \"[ALL_triage].[dut].[dut]\", \"[ALL_triage].[geode].[geode]\", \"[ALL_triage].[group_name].[group_name]\", \"[ALL_triage].[ip_config_id].[ip_config_id]\", \"[ALL_triage].[IPConfiguration].[IPConfiguration]\", \"[ALL_triage].[latst_model_version].[latst_model_version]\", \"[ALL_triage].[model].[model]\", \"[ALL_triage].[model_version].[model_version]\", \"[ALL_triage].[model_version_final].[model_version_final]\", \"[ALL_triage].[model_version_parsed].[model_version_parsed]\", \"[ALL_triage].[model_version_parsed_check].[model_version_parsed_check]\", \"[ALL_triage].[new_count].[new_count]\", \"[ALL_triage].[stepping].[stepping]\", \"[ALL_triage].[subcomponent].[subcomponent]\", \"[ALL_triage].[submitted_date].[submitted_date]\", \"[ALL_triage].[team].[team]\", \"[ALL_triage].[test_name].[test_name]\", \"[ALL_triage].[testlist_release_id].[testlist_release_id]\", \"[ALL_triage].[workweek].[workweek]\"}, {\"ALL_triage.ace_model\", \"ALL_triage.auto_rerun\", \"ALL_triage.branch\", \"ALL_triage.bucket_id\", \"ALL_triage.bucket_name\", \"ALL_triage.debugged_count\", \"ALL_triage.debugger\", \"ALL_triage.dut\", \"ALL_triage.geode\", \"ALL_triage.group_name\", \"ALL_triage.ip_config_id\", \"ALL_triage.IPConfiguration\", \"ALL_triage.latst_model_version\", \"ALL_triage.model\", \"ALL_triage.model_version\", \"ALL_triage.model_version_final\", \"ALL_triage.model_version_parsed\", \"ALL_triage.model_version_parsed_check\", \"ALL_triage.new_count\", \"ALL_triage.stepping\", \"ALL_triage.subcomponent\", \"ALL_triage.submitted_date\", \"ALL_triage.team\", \"ALL_triage.test_name\", \"ALL_triage.testlist_release_id\", \"ALL_triage.workweek\"}}",
+                "        })",
+                "in",
+                "    #\"Added Items\""
+              ]
+            }
+          }
+        ],
+        "measures": [
+          {
+            "name": "numbucketPARTIALdebugged",
+            "expression": "CALCULATE(SUMX(SUMMARIZE(Triage, [ALL_triage.bucket_name],\"is_partial\", IF(SUM([ALL_triage.new_count]) > 0 && sum([ALL_triage.debugged_count]) > 0, 1, 0)), [is_partial])) + 0"
+          },
+          {
+            "name": "numbucketALLdebugged",
+            "expression": "CALCULATE(SUMX(SUMMARIZE(Triage, [ALL_triage.bucket_name],\"is_all\", IF(SUM([ALL_triage.new_count]) = 0 && sum([ALL_triage.debugged_count]) > 0, 1, 0)), [is_all])) + 0"
+          },
+          {
+            "name": "numbucketNONEdebugged",
+            "expression": "CALCULATE(SUMX(SUMMARIZE(Triage, [ALL_triage.bucket_name],\"is_none\", IF(SUM([ALL_triage.new_count]) > 0 && sum([ALL_triage.debugged_count]) = 0, 1, 0)), [is_none])) + 0"
+          },
+          {
+            "name": "numbucket",
+            "expression": "DISTINCTCOUNT([ALL_triage.bucket_name]) + 0"
+          }
+        ]
+      },
+      {
+        "name": "LQDash",
+        "columns": [
+          {
+            "name": "ibi_bulk_id",
+            "dataType": "int64",
+            "sourceColumn": "ibi_bulk_id",
+            "sourceProviderType": "BigInt"
+          },
+          {
+            "name": "ibi_row_id",
+            "dataType": "int64",
+            "sourceColumn": "ibi_row_id",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "ibi_ins_dtm",
+            "dataType": "dateTime",
+            "sourceColumn": "ibi_ins_dtm",
+            "formatString": "General Date",
+            "sourceProviderType": "Date"
+          },
+          {
+            "name": "ibi_updt_dtm",
+            "dataType": "dateTime",
+            "sourceColumn": "ibi_updt_dtm",
+            "formatString": "General Date",
+            "sourceProviderType": "Date"
+          },
+          {
+            "name": "CLUSTER",
+            "dataType": "string",
+            "sourceColumn": "CLUSTER",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "STEPPING",
+            "dataType": "string",
+            "sourceColumn": "STEPPING",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "Branch",
+            "dataType": "string",
+            "sourceColumn": "Branch",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "NIGHTLY BUILD",
+            "dataType": "string",
+            "sourceColumn": "NIGHTLY BUILD",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "METRIC",
+            "dataType": "string",
+            "sourceColumn": "METRIC",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "Value",
+            "dataType": "string",
+            "sourceColumn": "Value",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "URL",
+            "dataType": "string",
+            "sourceColumn": "URL",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "source_excel_file",
+            "dataType": "string",
+            "sourceColumn": "source_excel_file",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "sampletime",
+            "dataType": "dateTime",
+            "sourceColumn": "sampletime",
+            "formatString": "General Date",
+            "sourceProviderType": "Date"
+          },
+          {
+            "type": "calculated",
+            "name": "Configuration",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": "LOOKUPVALUE(config_model_list[REGRESSIONS_ALL.IPConfiguration], config_model_list[REGRESSIONS_ALL.model_version], LQDash[NIGHTLY BUILD], blank())"
+          },
+          {
+            "type": "calculated",
+            "name": "value_int",
+            "dataType": "double",
+            "isDataTypeInferred": true,
+            "expression": "IFERROR(VALUE(SUBSTITUTE([Value], \"%\", \"\")), blank())"
+          },
+          {
+            "type": "calculated",
+            "name": "metric_type",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": "LOOKUPVALUE(lqdash_targets_mdm[type], lqdash_targets_mdm[metric], LQDash[METRIC], blank())"
+          },
+          {
+            "type": "calculated",
+            "name": "metric_threshold",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": "LOOKUPVALUE(lqdash_targets_mdm[threshold], lqdash_targets_mdm[metric], LQDash[METRIC], blank())"
+          },
+          {
+            "type": "calculated",
+            "name": "color_category",
+            "dataType": "int64",
+            "isDataTypeInferred": true,
+            "expression": "IF([metric_type] = \"required\", IF([Value] = \"missing\", 7, IF([Value] = \"done\", 2, IF([Value] = \"N.A.\" , 1, IF([value_int] > value([metric_threshold]), 6, 5)))), 0)"
+          },
+          {
+            "type": "calculated",
+            "name": "branch_lookup",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": "LOOKUPVALUE(config_model_list[branch_mod], config_model_list[REGRESSIONS_ALL.model_version], LQDash[NIGHTLY BUILD], blank())"
+          },
+          {
+            "type": "calculated",
+            "name": "map",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": "[Configuration]&[branch_lookup]"
+          },
+          {
+            "type": "calculated",
+            "name": "lqdash_url",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": "\"https://sdg74-web.sc.intel.com/lq_dashboard/release_cth/lq_overview.cgi\"",
+            "dataCategory": "WebUrl"
+          },
+          {
+            "type": "calculated",
+            "name": "latest",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": "IF([sampletime] = max([sampletime]), \"latest\", \"\")"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "LQDash",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": [
+                "select * from ",
+                "V_BM_BE_LOGIC_QUALITY_DASH_DATA",
+                "where METRIC is not null"
+              ],
+              "dataSource": "iBI"
+            },
+            "annotations": [
+              {
+                "name": "QueryEditorSerialization",
+                "value": [
+                  "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>select * from ",
+                  "V_BM_BE_LOGIC_QUALITY_DASH_DATA",
+                  "where METRIC is not null</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+                ]
+              }
+            ]
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": [
+              "select * from ",
+              "V_BM_BE_LOGIC_QUALITY_DASH_DATA",
+              "where METRIC is not null"
+            ]
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "LQDash"
+          },
+          {
+            "name": "QueryEditorSerialization",
+            "value": [
+              "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>select * from ",
+              "V_BM_BE_LOGIC_QUALITY_DASH_DATA",
+              "where METRIC is not null</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "config_model_list",
+        "columns": [
+          {
+            "type": "calculatedTableColumn",
+            "name": "REGRESSIONS_ALL.IPConfiguration",
+            "dataType": "string",
+            "isNameInferred": true,
+            "isDataTypeInferred": true,
+            "sourceColumn": "Regression[REGRESSIONS_ALL.IPConfiguration]"
+          },
+          {
+            "type": "calculatedTableColumn",
+            "name": "REGRESSIONS_ALL.model_version",
+            "dataType": "string",
+            "isNameInferred": true,
+            "isDataTypeInferred": true,
+            "sourceColumn": "Regression[REGRESSIONS_ALL.model_version]"
+          },
+          {
+            "type": "calculatedTableColumn",
+            "name": "branch_mod",
+            "dataType": "string",
+            "isNameInferred": true,
+            "isDataTypeInferred": true,
+            "sourceColumn": "Regression[branch_mod]"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "CalculatedTable 1",
+            "source": {
+              "type": "calculated",
+              "expression": "SUMMARIZECOLUMNS(Regression[REGRESSIONS_ALL.IPConfiguration], Regression[REGRESSIONS_ALL.model_version], Regression[branch_mod], FILTER(Regression, not(ISBLANK(Regression[REGRESSIONS_ALL.IPConfiguration])) && NOT(ISBLANK(Regression[REGRESSIONS_ALL.model_version]))))"
+            }
+          }
+        ]
+      },
+      {
+        "name": "lqdash_targets_mdm",
+        "columns": [
+          {
+            "name": "metric",
+            "dataType": "string",
+            "sourceColumn": "metric",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "type",
+            "dataType": "string",
+            "sourceColumn": "type",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "threshold",
+            "dataType": "string",
+            "sourceColumn": "threshold",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "ibi_updated_date",
+            "dataType": "dateTime",
+            "sourceColumn": "ibi_updated_date",
+            "formatString": "General Date",
+            "sourceProviderType": "Date"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "lqdash_targets_mdm",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": [
+                "select * from ",
+                "ipg_lqdash_targets_mdm"
+              ],
+              "dataSource": "iBI"
+            },
+            "annotations": [
+              {
+                "name": "QueryEditorSerialization",
+                "value": [
+                  "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>select * from ",
+                  "ipg_lqdash_targets_mdm</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+                ]
+              }
+            ]
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": [
+              "select * from ",
+              "ipg_lqdash_targets_mdm"
+            ]
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "lqdash_targets_mdm"
+          },
+          {
+            "name": "QueryEditorSerialization",
+            "value": [
+              "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>select * from ",
+              "ipg_lqdash_targets_mdm</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+            ]
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "name": "6628ebde-65c3-4f38-86d7-06345ccffd9d",
+        "fromCardinality": "one",
+        "fromTable": "IPG_Bug",
+        "fromColumn": "id",
+        "toTable": "server_gk_branch",
+        "toColumn": "id",
+        "crossFilteringBehavior": "bothDirections"
+      },
+      {
+        "name": "c325b8c4-19b0-4f7c-ab96-3b499df57f2c",
+        "fromTable": "IPG_Bug",
+        "fromColumn": "map",
+        "toTable": "Master_list",
+        "toColumn": "map"
+      },
+      {
+        "name": "23a963a5-88b2-4369-87dc-1d7dd7978259",
+        "fromTable": "Triage",
+        "fromColumn": "map",
+        "toTable": "Master_list",
+        "toColumn": "map"
+      },
+      {
+        "name": "f354df1d-0d8c-467a-993a-226ee1b4b02b",
+        "fromTable": "Coverage",
+        "fromColumn": "map",
+        "toTable": "Master_list",
+        "toColumn": "map"
+      },
+      {
+        "name": "057abf8c-2b1d-442e-ba58-cdcdc21dc850",
+        "fromTable": "Regression",
+        "fromColumn": "map",
+        "toTable": "Master_list",
+        "toColumn": "map"
+      },
+      {
+        "name": "de616e9c-0bce-441d-8d5c-3c081c262875",
+        "fromTable": "LQDash",
+        "fromColumn": "map",
+        "toTable": "Master_list",
+        "toColumn": "map"
+      }
+    ],
+    "roles": [
+      {
+        "name": "developers",
+        "modelPermission": "administrator",
+        "members": [
+          {
+            "memberName": "AMR\\kfpalma",
+            "memberId": "S-1-5-21-725345543-602162358-527237240-1805062"
+          },
+          {
+            "memberName": "AMR\\IPG_Dashboard_Developers",
+            "memberId": "S-1-5-21-725345543-602162358-527237240-4603422"
+          }
+        ]
+      },
+      {
+        "name": "super users",
+        "modelPermission": "readRefresh",
+        "members": [
+          {
+            "memberName": "AMR\\IPG_Dashboard_SuperUsers",
+            "memberId": "S-1-5-21-725345543-602162358-527237240-4603439"
+          }
+        ]
+      },
+      {
+        "name": "users",
+        "members": [
+          {
+            "memberName": "AMR\\IPG_Dashboard_Users",
+            "memberId": "S-1-5-21-725345543-602162358-527237240-4603440"
+          }
+        ]
+      }
+    ],
+    "annotations": [
+      {
+        "name": "ClientCompatibilityLevel",
+        "value": "500"
+      }
+    ]
+  },
+  "id": "SemanticModel"
+}
